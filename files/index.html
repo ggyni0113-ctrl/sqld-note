@@ -1,0 +1,1836 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SQLD 올인원 합격노트</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="progress" id="progress"></div>
+
+<!-- MOBILE TOP BAR -->
+<div class="topbar">
+  <button class="hamb" id="hamb" aria-label="메뉴">☰</button>
+  <b>SQLD 올인원 합격노트</b>
+</div>
+<div class="scrim" id="scrim"></div>
+
+<!-- LNB -->
+<nav class="lnb" id="lnb">
+  <div class="lnb__brand">
+    <span class="lnb__logo">SQ</span>
+    <span><b>SQLD 올인원 합격노트</b><small>비전공자를 위한 단권화 노트</small></span>
+  </div>
+  <div class="lnb__dday" id="dday"><b>시험까지</b><span>2026-11-14 (토) 예정</span></div>
+  <div class="lnb__group">
+    <div class="lnb__gt">시작하기</div>
+    <a data-target="intro"><span class="dot" style="background:var(--brand-coral)"></span>시험 가이드 &amp; 공부법</a>
+    <div class="lnb__gt">1과목 · 데이터 모델링의 이해</div>
+    <a data-target="ch21"><span class="dot" style="background:var(--brand-pink)"></span>2-1 데이터 모델링의 이해</a>
+    <a data-target="ch22"><span class="dot" style="background:var(--brand-lavender)"></span>2-2 데이터 모델과 SQL</a>
+    <div class="lnb__gt">2과목 · SQL 기본 및 활용</div>
+    <a data-target="ch31"><span class="dot" style="background:var(--brand-peach)"></span>3-1 SQL 기본</a>
+    <a data-target="ch32"><span class="dot" style="background:var(--brand-ochre)"></span>3-2 SQL 활용</a>
+    <a data-target="ch33"><span class="dot" style="background:var(--brand-teal)"></span>3-3 관리 구문</a>
+    <a data-target="ch34"><span class="dot" style="background:var(--brand-coral)"></span>꼭 나오는 SQL 보충</a>
+    <div class="lnb__gt">실전 기출문제</div>
+    <a data-target="exam1"><span class="dot" style="background:var(--brand-mint)"></span>최신 기출 1회 (50문항)</a>
+    <a data-target="exam2"><span class="dot" style="background:var(--brand-mint)"></span>최신 기출 2회 (50문항)</a>
+  </div>
+  <div class="lnb__foot">더프롬 기획팀 · SQLD 단권화 노트<br>원본 강의 교안·기출을 재구성했습니다.</div>
+</nav>
+
+<main class="main">
+
+
+<!-- ================= INTRO ================= -->
+<section class="panel active" id="intro">
+<section class="tile tile--dark"><div class="wrap">
+<div class="phead">
+    <div class="eyebrow">START HERE</div>
+    <h1 class="display-xl">비전공자도,<br>이 노트 하나로 합격.</h1>
+    <p class="sub">SQLD(SQL 개발자) 자격시험을 처음 준비하는 분을 위해 만들었습니다. 강의를 따로 듣지 않아도 되도록, 모든 개념을 쉬운 비유와 그림·표·기출문제로 풀어 정리했습니다. 왼쪽 메뉴에서 과목을 눌러 이동하세요.</p>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<div class="two-col">
+    <div class="fcard fcard--peach">
+      <span class="fnum">시험 구성</span>
+      <h3>총 50문항 · 90분</h3>
+      <p>1과목 <strong>데이터 모델링의 이해</strong> 10문항 + 2과목 <strong>SQL 기본 및 활용</strong> 40문항. 객관식 4지선다입니다.</p>
+    </div>
+    <div class="fcard fcard--peach">
+      <span class="fnum">합격 기준</span>
+      <h3>100점 만점 · 60점 이상</h3>
+      <p>단, 과목별 <strong>40% 미만(과락)</strong>이면 불합격. 1과목은 최소 4문항, 2과목은 최소 16문항을 맞혀야 과락을 면합니다.</p>
+    </div>
+  </div>
+
+  <div class="exam">
+    <span class="exam__dot">!</span>
+    <p><b>배점 감각</b> &nbsp;2과목(SQL)이 40문항으로 전체의 80%입니다. 즉 <strong>SQL에서 승부가 납니다.</strong> 1과목은 개념 암기로 빠르게 득점하고, 2과목에 공부 시간을 더 투자하세요.</p>
+  </div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">자격증 기본 정보</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>항목</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td>시행 기관</td><td>한국데이터산업진흥원(KDATA) · <strong>국가공인 데이터 자격</strong></td></tr>
+      <tr><td>문항 / 시간</td><td>50문항 · 90분 · 객관식 4지선다</td></tr>
+      <tr><td>합격 기준</td><td>100점 만점 60점 이상 (과목별 40% 미만 과락)</td></tr>
+      <tr><td>출제 범위</td><td>1과목 데이터 모델링의 이해(10) + 2과목 SQL 기본 및 활용(40)</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">D-day까지 이렇게 쓰세요</h3>
+  <div class="steps">
+    <div class="step"><span class="step__n">1</span><div><h4>1회독 — 개념 눈에 익히기</h4><p>1과목 → 2과목 순서로 각 챕터의 본문과 "쉽게 말하면" 콜아웃만 빠르게 읽습니다. 다 이해 못 해도 괜찮아요.</p></div></div>
+    <div class="step"><span class="step__n">2</span><div><h4>2회독 — 표·암기 포인트 집중</h4><p>각 챕터의 표와 <span class="pill pill--pink" style="font-size:11px;">시험 포인트</span> 박스, 암기팁을 외웁니다. 챕터 끝 확인 퀴즈를 풀어 보세요.</p></div></div>
+    <div class="step"><span class="step__n">3</span><div><h4>3회독 — 기출 2회분 실전</h4><p>기출 1·2회(100문항)를 풀고, 틀린 문제의 해설을 다시 읽습니다. 반복해서 나오는 개념이 곧 출제 포인트입니다.</p></div></div>
+  </div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">바로 시작하기</h3>
+  <div class="toc-cards">
+    <button class="toc-card" data-jump="ch21"><span class="n" style="background:var(--brand-pink)">2-1</span><b>데이터 모델링의 이해</b><span>엔터티·속성·관계·식별자</span></button>
+    <button class="toc-card" data-jump="ch22"><span class="n" style="background:var(--brand-lavender);color:var(--ink)">2-2</span><b>데이터 모델과 SQL</b><span>정규화·반정규화·트랜잭션·NULL</span></button>
+    <button class="toc-card" data-jump="ch31"><span class="n" style="background:var(--brand-peach);color:var(--ink)">3-1</span><b>SQL 기본</b><span>SELECT·연산자·함수</span></button>
+    <button class="toc-card" data-jump="ch32"><span class="n" style="background:var(--brand-ochre);color:var(--ink)">3-2</span><b>SQL 활용</b><span>서브쿼리·뷰·집합·그룹함수</span></button>
+    <button class="toc-card" data-jump="ch33"><span class="n" style="background:var(--brand-teal)">3-3</span><b>관리 구문</b><span>DML·TCL·DDL·DCL</span></button>
+    <button class="toc-card" data-jump="exam1"><span class="n" style="background:var(--brand-coral)">기출</span><b>실전 기출 100문항</b><span>1회 + 2회, 해설 포함</span></button>
+  </div>
+</div></section>
+</section>
+
+<!-- ================= CH 2-1 ================= -->
+<section class="panel" id="ch21">
+<section class="tile tile--parchment"><div class="wrap">
+<div class="phead">
+    <div class="eyebrow">1과목 · 1-1 데이터 모델링의 이해</div>
+    <h1 class="display-lg">데이터 모델링의 이해</h1>
+    <p class="sub">현실의 업무를 데이터베이스로 옮기는 설계 단계입니다. 1과목은 10문항뿐이지만 <strong>용어 구분</strong>(엔터티·속성·관계·식별자)만 잡으면 빠르게 득점할 수 있습니다. 처음이라면 이 챕터를 가장 천천히 읽으세요.</p>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">1. 데이터 모델링이란</h3>
+  <p class="lead">현실 세계의 업무를 약속된 규칙(표기법)으로 그려 <strong>데이터베이스 구조</strong>로 옮기는 설계 작업입니다.</p>
+  <div class="eli5"><span class="eli5__label">💡 쉽게 말하면</span>
+    <p>데이터 모델링은 <strong>현실을 지도로 그리는 일</strong>이에요. 실제 도시엔 건물·사람·차가 가득하지만 지도엔 길과 주요 건물만 간단히 그리죠. 똑같이, 복잡한 회사 업무에서 "저장·관리할 정보"만 골라 깔끔한 그림으로 옮기는 게 데이터 모델링입니다. 집을 짓기 전에 <strong>설계도</strong>부터 그리는 것과 같습니다.</p>
+  </div>
+  <h4 class="sub3">왜 하나요? — 모델링을 안 하면 생기는 3가지 문제</h4>
+  <div class="three-col">
+    <div class="fcard fcard--peach"><span class="fnum">문제 1</span><h3>중복</h3><p>같은 정보가 여기저기 저장돼 저장공간을 낭비하고 관리가 어려워집니다.</p></div>
+    <div class="fcard fcard--peach"><span class="fnum">문제 2</span><h3>비일관성</h3><p>한 곳만 고치고 다른 곳을 놓쳐 값이 서로 안 맞게 됩니다(정합성 깨짐).</p></div>
+    <div class="fcard fcard--peach"><span class="fnum">문제 3</span><h3>비유연성</h3><p>구조가 뒤엉켜 작은 업무 변경에도 전체를 손봐야 합니다.</p></div>
+  </div>
+  <p>데이터 모델링은 이 세 가지를 막기 위해, 업무 데이터를 <strong>중복 없이·일관되게·바꾸기 쉽게</strong> 정리하는 작업입니다.</p>
+
+  <h4 class="sub3">데이터 모델링의 3가지 특징 — '추·단·명'</h4>
+  <div class="three-col">
+    <div class="fcard fcard--pink"><span class="fnum">특징 1</span><h3>추상화</h3><p>공통된 특징을 뽑아 간략하게. 핵심만 남깁니다.</p></div>
+    <div class="fcard fcard--lavender"><span class="fnum">특징 2</span><h3>단순화</h3><p>복잡함을 피하고 누구나 이해할 수 있게 표현합니다.</p></div>
+    <div class="fcard fcard--ochre"><span class="fnum">특징 3</span><h3>명확화</h3><p>해석이 모호하지 않게, 한 가지 의미만 갖도록 합니다.</p></div>
+  </div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">2. 데이터 모델링 3단계 — 개념 → 논리 → 물리</h3>
+  <p>모델링은 추상적인 밑그림에서 시작해 점점 구체적인 DB 구조로 좁혀갑니다. 뒤로 갈수록 <strong>기술적·구체적</strong>이 됩니다.</p>
+  <div class="three-col">
+    <div class="fcard fcard--peach"><span class="fnum">1단계 · 개념적</span><h3>개념적 모델링</h3><p>전사(업무 전체) 관점. 추상화 수준이 <strong>가장 높음</strong>. 중요한 엔터티·관계만 뽑아 <strong>개념 ERD</strong>를 그립니다.</p></div>
+    <div class="fcard fcard--lavender"><span class="fnum">2단계 · 논리적</span><h3>논리적 모델링</h3><p>식별자·속성·관계를 정확히 표현하고 <strong>정규화</strong>로 중복을 제거합니다. 특정 DBMS에 독립적인, 모델링의 <strong>핵심 완성 단계</strong>.</p></div>
+    <div class="fcard fcard--teal"><span class="fnum">3단계 · 물리적</span><h3>물리적 모델링</h3><p>실제 DB에 맞춰 테이블·컬럼·인덱스를 설계. <strong>성능·보안·저장</strong>을 고려한 최종 구축 단계.</p></div>
+  </div>
+  <div class="flow">
+    <div class="flow__box"><b>개념적</b><span>핵심 엔터티·관계</span></div>
+    <div class="flow__arrow flow__arrow--dir">→</div>
+    <div class="flow__box"><b>논리적</b><span>속성·식별자·정규화</span></div>
+    <div class="flow__arrow flow__arrow--dir">→</div>
+    <div class="flow__box flow__box--on"><b>물리적</b><span>테이블·인덱스·성능</span></div>
+  </div>
+  <div class="eli5"><span class="eli5__label">🏠 집 짓기로 비유</span>
+    <p><strong>개념적</strong> = '방3·거실1' 손스케치 → <strong>논리적</strong> = 치수·배관까지 그린 설계도면 → <strong>물리적</strong> = 벽돌로 실제 시공. 설계(개념·논리)가 탄탄해야 시공(물리)에서 고생하지 않습니다.</p>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;"추상화 수준이 가장 높다" → <strong>개념적</strong>. "특정 DBMS에 독립적, 정규화 수행" → <strong>논리적</strong>. "인덱스·성능·실제 테이블 생성" → <strong>물리적</strong>.</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">3. 데이터 모델링의 3가지 관점</h3>
+  <p>같은 업무라도 무엇에 초점을 두고 보느냐에 따라 세 관점으로 나뉩니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>관점</th><th>초점</th><th>분석 활동</th></tr></thead>
+    <tbody>
+      <tr><td><strong>데이터 관점</strong></td><td>업무에서 <strong>쓰는 데이터</strong>는 무엇인가</td><td>구조 분석(정적 분석)</td></tr>
+      <tr><td><strong>프로세스 관점</strong></td><td>업무에서 <strong>하는 일</strong>은 무엇인가</td><td>시나리오 분석(동적 분석)</td></tr>
+      <tr><td><strong>데이터+프로세스 관점</strong></td><td>업무와 데이터가 <strong>어떻게 연관</strong>되나</td><td><strong>CRUD 매트릭스</strong></td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;"CRUD 매트릭스" 또는 "데이터와 프로세스의 상관"이 보이면 → <strong>데이터+프로세스 관점</strong>. CRUD = Create(생성)·Read(조회)·Update(수정)·Delete(삭제).</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">4. 3층 스키마 (데이터 독립성)</h3>
+  <p class="lead">사용자·설계자·개발자가 DB를 보는 관점을 3단계로 나눈 <strong>ANSI 표준</strong>. 목적은 <strong>데이터 독립성</strong> 확보입니다.</p>
+  <div class="eli5"><span class="eli5__label">🎬 쉽게 말하면</span><p>영화관에서 <strong>관객</strong>은 스크린만(외부), <strong>기획자</strong>는 전체 구성을(개념), <strong>영사기사</strong>는 필름 작동을(내부) 봅니다. 관점을 나눠두면 한쪽이 바뀌어도 다른 쪽이 흔들리지 않습니다.</p></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>스키마</th><th>관점</th><th>내용</th></tr></thead>
+    <tbody>
+      <tr><td><strong>외부 스키마</strong></td><td>사용자 관점</td><td>사용자 뷰(View). 각자 필요한 데이터만 보는 창.</td></tr>
+      <tr><td><strong>개념 스키마</strong></td><td>설계자 관점</td><td>조직 전체가 공유하는 통합 구조. 모든 규칙·관계.</td></tr>
+      <tr><td><strong>내부 스키마</strong></td><td>개발자 관점</td><td><strong>물리적 저장구조</strong> — 저장·레코드·필드·인덱스.</td></tr>
+    </tbody>
+  </table></div>
+  <div class="two-col">
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">논리적 독립성</div><p style="margin:0;font-size:15px;">개념 스키마가 바뀌어도 <strong>외부 스키마(사용자 뷰)는 영향 없음</strong>. 테이블에 컬럼을 추가해도 기존 화면은 그대로.</p></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">물리적 독립성</div><p style="margin:0;font-size:15px;">내부 스키마(저장·인덱스)가 바뀌어도 <strong>개념 스키마는 영향 없음</strong>. 디스크를 바꿔도 테이블 설계는 그대로.</p></div>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;"물리적 저장구조·인덱스" → <strong>내부</strong>. "사용자 뷰" → <strong>외부</strong>. "전체 통합 설계" → <strong>개념</strong>. 독립성은 <strong>논리적·물리적</strong> 두 가지.</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">5. ERD 작성 절차 <span class="pill pill--pink" style="font-size:12px;vertical-align:middle;">시험 단골</span></h3>
+  <p>ERD(Entity-Relationship Diagram)는 엔터티와 관계를 그리는 표준 그림(1976년 피터 첸 고안)입니다. 작성은 <strong>6단계 순서</strong>로 진행되며 이 순서가 그대로 출제됩니다.</p>
+  <div class="steps">
+    <div class="step"><span class="step__n">1</span><div><h4>엔터티를 그린다</h4><p>업무에서 관리할 집합(덩어리)을 도출합니다.</p></div></div>
+    <div class="step"><span class="step__n">2</span><div><h4>엔터티를 적절히 배치한다</h4><p>가장 중요한 엔터티를 <strong>왼쪽 상단</strong>에 둡니다.</p></div></div>
+    <div class="step"><span class="step__n">3</span><div><h4>엔터티 간 관계를 설정한다</h4><p>연관되는 엔터티끼리 선을 긋습니다.</p></div></div>
+    <div class="step"><span class="step__n">4</span><div><h4>관계명을 기술한다</h4><p>관계에 '주문하다' 같은 이름을 붙입니다.</p></div></div>
+    <div class="step"><span class="step__n">5</span><div><h4>관계 참여도(차수)를 기술한다</h4><p>서로 몇 개씩 참여하는지(예: 고객 1 : 계좌 N).</p></div></div>
+    <div class="step"><span class="step__n">6</span><div><h4>관계의 필수 여부를 기술한다</h4><p>반드시 있어야 하는 관계인지(필수/선택) 표시합니다.</p></div></div>
+  </div>
+  <div class="tip"><span class="tip__dot">★</span><p><b>암기팁</b> &nbsp;"누가 있나(1·2) → 어떻게 잇나(3) → 이름(4) → 몇 개(5) → 필수(6)". 관계 3종(관계명 → 참여도 → 필수)은 항상 <strong>뒤쪽</strong>에 옵니다.</p></div>
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">❓ 확인 퀴즈 · ERD 절차</div>
+    <div class="quiz__q">ERD 작성 절차로 올바른 것은? (ㄱ엔터티도출 · ㄴ배치 · ㄷ관계설정 · ㄹ관계명 · ㅁ참여도 · ㅂ필수여부)</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>ㄱ → ㄴ → ㄷ → ㄹ → ㅁ → ㅂ</button>
+      <button class="opt"><span class="opt__key">2</span>ㄱ → ㄴ → ㄷ → ㄹ → ㅂ → ㅁ</button>
+      <button class="opt"><span class="opt__key">3</span>ㄴ → ㄱ → ㄷ → ㄹ → ㅁ → ㅂ</button>
+      <button class="opt"><span class="opt__key">4</span>ㄱ → ㄷ → ㄴ → ㄹ → ㅁ → ㅂ</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ①</b> 도출 → 배치 → 관계설정 → 관계명 → 참여도 → 필수여부. 뒤 3개(관계명·참여도·필수)의 순서를 헷갈리지 마세요.</div>
+  </div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">6. 엔터티 (Entity) <span class="pill pill--pink" style="font-size:12px;vertical-align:middle;">최빈출</span></h3>
+  <p class="lead">업무에서 관리해야 할 <strong>정보의 덩어리(명사)</strong>. 실제로는 <strong>테이블</strong>이 됩니다.</p>
+  <div class="eli5"><span class="eli5__label">📦 쉽게 말하면</span><p>쇼핑몰이라면 <strong>회원·상품·주문·배송</strong> 같은 명사 하나하나가 엔터티예요. 엔터티는 <strong>엑셀 시트 한 장의 제목</strong>('회원' 시트), 그 안의 한 줄 한 줄이 <strong>인스턴스(행)</strong>, 열 제목이 <strong>속성</strong>입니다.</p></div>
+  <h4 class="sub3">엔터티 · 속성 · 인스턴스의 관계</h4>
+  <div class="three-col">
+    <div class="fcard fcard--lavender"><span class="fnum">📋 집합</span><h3>엔터티 = 테이블</h3><p>정보의 덩어리. 예: <strong>회원(MEMBER)</strong></p></div>
+    <div class="fcard fcard--lavender"><span class="fnum">🏷️ 항목</span><h3>속성 = 컬럼</h3><p>세부 항목. 회원ID · 이름 · 전화번호</p></div>
+    <div class="fcard fcard--lavender"><span class="fnum">📄 한 건</span><h3>인스턴스 = 행</h3><p>개별 사례. C001 · 김철수 · 010-1111</p></div>
+  </div>
+  <p class="note">↓ 위 엔터티가 실제 테이블이 되면 이렇게 채워집니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>MEMBER_ID</th><th>NAME</th><th>PHONE</th><th>JOIN_DATE</th></tr></thead>
+    <tbody>
+      <tr><td>C001</td><td>김철수</td><td>010-1111-2222</td><td>2026-01-15</td></tr>
+      <tr><td>C002</td><td>이영희</td><td>010-2222-3333</td><td>2026-02-08</td></tr>
+      <tr><td>C003</td><td>박민수</td><td>010-3333-4444</td><td>2026-03-22</td></tr>
+    </tbody>
+  </table></div>
+  <div class="diagram erd">
+    <p class="dcap">ER 다이어그램 — 회원(MEMBER) 1 : N 주문(ORDER)</p>
+    <svg viewBox="0 0 640 210" role="img" aria-label="회원과 주문 엔터티 관계도">
+      <rect class="box" x="40" y="35" width="210" height="150" rx="10"/>
+      <path class="hd" d="M40 45 a10 10 0 0 1 10 -10 h190 a10 10 0 0 1 10 10 v24 h-210 z"/>
+      <text class="hdt" x="145" y="61" text-anchor="middle">MEMBER</text>
+      <text class="kt" x="58" y="95">PK</text><text class="rt" x="88" y="95">MEMBER_ID</text>
+      <text class="rt" x="58" y="123">NAME</text>
+      <text class="rt" x="58" y="151">PHONE</text>
+      <text class="rt" x="58" y="179">JOIN_DATE</text>
+      <rect class="box" x="400" y="55" width="200" height="120" rx="10"/>
+      <path class="hd" d="M400 65 a10 10 0 0 1 10 -10 h180 a10 10 0 0 1 10 10 v24 h-200 z"/>
+      <text class="hdt" x="500" y="81" text-anchor="middle">ORDER</text>
+      <text class="kt" x="416" y="115">PK</text><text class="rt" x="446" y="115">ORDER_ID</text>
+      <text class="kt" x="416" y="143">FK</text><text class="rt" x="446" y="143">MEMBER_ID</text>
+      <text class="rt" x="416" y="171">ORD_DATE</text>
+      <line class="ln" x1="250" y1="110" x2="400" y2="110"/>
+      <line class="ln" x1="272" y1="100" x2="272" y2="120"/>
+      <text class="lbl" x="266" y="136">1</text>
+      <path class="ln" d="M400 110 L380 100 M400 110 L380 110 M400 110 L380 120"/>
+      <text class="lbl" x="372" y="136">N</text>
+      <text class="lbl" x="325" y="102" text-anchor="middle">주문하다</text>
+    </svg>
+  </div>
+  <p>표 전체가 <strong>엔터티(MEMBER)</strong>, 헤더가 <strong>속성</strong>, 각 행이 <strong>인스턴스</strong>입니다.</p>
+
+  <h4 class="sub3">엔터티의 5가지 특징 — '업·식·인·속·관'</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>글자</th><th>특징</th><th>의미</th></tr></thead>
+    <tbody>
+      <tr><td><strong>업</strong></td><td>업무에서 필요</td><td>관리할 가치가 있는 정보여야 한다</td></tr>
+      <tr><td><strong>식</strong></td><td>식별 가능</td><td>식별자로 각 건을 유일하게 구분할 수 있어야 한다</td></tr>
+      <tr><td><strong>인</strong></td><td>인스턴스 2개 이상</td><td>행이 2건 이상 존재해야 한다</td></tr>
+      <tr><td><strong>속</strong></td><td>속성 2개 이상</td><td>컬럼이 2개 이상이어야 한다</td></tr>
+      <tr><td><strong>관</strong></td><td>관계 1개 이상</td><td>다른 엔터티와 최소 1개의 관계를 가져야 한다</td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>함정 주의</b> &nbsp;"엔터티는 속성이 <strong>1개여도</strong> 된다" → <u>틀림</u>(2개 이상). "인스턴스가 1건이어도 된다" → <u>틀림</u>(2건 이상). <strong>개수 조건</strong>이 자주 함정으로 나옵니다.</p></div>
+
+  <h4 class="sub3">엔터티의 분류 — 2가지 기준</h4>
+  <div class="two-col">
+    <div class="card"><div class="eyebrow" style="margin-bottom:10px;">① 유·무형 (형태 유무)</div><dl style="margin:0;">
+      <div class="term" style="border:0;padding:5px 0;"><dt>유형 엔터티</dt><dd>물리적 형태 있음 — 상품·사원·매장</dd></div>
+      <div class="term" style="border:0;padding:5px 0;"><dt>개념 엔터티</dt><dd>개념적으로만 존재 — 부서·조직·학과</dd></div>
+      <div class="term" style="border:0;padding:5px 0;"><dt>사건 엔터티</dt><dd>행위로 발생 — 주문·결제·출입기록</dd></div>
+    </dl></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:10px;">② 발생 시점</div><dl style="margin:0;">
+      <div class="term" style="border:0;padding:5px 0;"><dt>기본(키) 엔터티</dt><dd>다른 엔터티 없이도 성립 — 사원·부서·고객</dd></div>
+      <div class="term" style="border:0;padding:5px 0;"><dt>중심 엔터티</dt><dd>기본에서 발생, 업무 중심 — 주문·계약·매출</dd></div>
+      <div class="term" style="border:0;padding:5px 0;"><dt>행위 엔터티</dt><dd>2개 이상 엔터티의 관계에서 발생 — 주문상세·입출금</dd></div>
+    </dl></div>
+  </div>
+  <p class="dcap">발생 시점 — 기본에서 중심, 다시 행위로 파생</p>
+  <div class="flow">
+    <div class="flow__box"><b>기본(키) 엔터티</b><span>스스로 성립 · 사원·부서</span></div>
+    <div class="flow__arrow flow__arrow--dir">→</div>
+    <div class="flow__box"><b>중심 엔터티</b><span>기본에서 발생 · 주문·계약</span></div>
+    <div class="flow__arrow flow__arrow--dir">→</div>
+    <div class="flow__box flow__box--on"><b>행위 엔터티</b><span>관계에서 발생 · 주문상세</span></div>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>헷갈림 주의</b> &nbsp;<strong>사건 엔터티</strong>는 '유·무형' 분류 쪽입니다. '발생 시점' 분류는 기본·중심·<strong>행위</strong>. "발생 시점이 아닌 것?" → 사건 엔터티. "주문은 기본 엔터티다" → <u>틀림</u>(고객·상품에서 발생하므로 <strong>중심 엔터티</strong>).</p></div>
+
+  <h4 class="sub3">SQL 실전 — 엔터티는 테이블이 된다</h4>
+  <p class="note">회원 엔터티를 실제 테이블로 만들고, 인스턴스(행)를 넣고, 조회해 봅니다.</p>
+  <div class="codeblock"><span class="cm">-- ① 엔터티 → 테이블 생성 (CREATE)</span>
+<span class="kw">CREATE TABLE</span> MEMBER (
+  MEMBER_ID <span class="kw">VARCHAR2</span>(10) <span class="kw">PRIMARY KEY</span>,  <span class="cm">-- 식별자(PK)</span>
+  NAME      <span class="kw">VARCHAR2</span>(50),
+  PHONE     <span class="kw">VARCHAR2</span>(20),
+  JOIN_DATE <span class="kw">DATE</span>
+);
+
+<span class="cm">-- ② 인스턴스(행) 입력 (INSERT)</span>
+<span class="kw">INSERT INTO</span> MEMBER <span class="kw">VALUES</span> (<span class="st">'M01'</span>, <span class="st">'김철수'</span>, <span class="st">'010-1111'</span>, <span class="kw">DATE</span> <span class="st">'2026-01-15'</span>);
+<span class="kw">INSERT INTO</span> MEMBER <span class="kw">VALUES</span> (<span class="st">'M02'</span>, <span class="st">'이영희'</span>, <span class="st">'010-2222'</span>, <span class="kw">DATE</span> <span class="st">'2026-02-08'</span>);
+
+<span class="cm">-- ③ 조회 (SELECT)</span>
+<span class="kw">SELECT</span> MEMBER_ID, NAME <span class="kw">FROM</span> MEMBER;</div>
+  <p class="note">↓ 결과</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>MEMBER_ID</th><th>NAME</th></tr></thead>
+    <tbody><tr><td>M01</td><td>김철수</td></tr><tr><td>M02</td><td>이영희</td></tr></tbody>
+  </table></div>
+  <p>SELECT 문이 두 인스턴스(M01·M02)에서 두 속성(MEMBER_ID·NAME)만 골라 보여줍니다. <strong>엔터티(설계) → 테이블(SQL) → 행(인스턴스)</strong>으로 단계가 매핑됩니다.</p>
+
+  <h4 class="sub3">Before &amp; After — 엔터티 도출 전후</h4>
+  <div class="two-col">
+    <div class="fcard fcard--peach"><span class="fnum">BEFORE</span><h3>한 덩어리</h3><p>"김철수가 2026-04-01에 사과 2개 주문" — 회원·상품·주문 정보가 한 문장에 뒤섞여 있어 중복·수정이 어렵습니다.</p></div>
+    <div class="fcard fcard--teal"><span class="fnum">AFTER</span><h3>엔터티 분리</h3><p><strong>회원</strong>(M01 김철수) · <strong>상품</strong>(P01 사과) · <strong>주문</strong>(M01·P01·2개)으로 나누면 각 정보를 한 번만 저장하고 재사용할 수 있습니다.</p></div>
+  </div>
+
+  <div class="card--cream card" style="margin-top:24px;"><div class="eyebrow" style="margin-bottom:8px;">⏱️ 30초 정리 · 엔터티</div><p style="margin:0;font-size:15.5px;">5대 특징 = <strong>업·식·인·속·관</strong>(인스턴스·속성은 2개 이상). 유·무형 = <strong>유형·개념·사건</strong>. 발생시점 = <strong>기본·중심·행위</strong>. 엔터티=집합(테이블), 인스턴스=그 집합의 한 건(행).</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">7. 속성 (Attribute)</h3>
+  <p class="lead">엔터티가 가지는 <strong>세부 항목</strong>. 더 이상 쪼갤 수 없는 의미의 최소 단위이며, 테이블의 <strong>컬럼</strong>이 됩니다.</p>
+  <ul class="plain-list">
+    <li>업무에서 관리되는 정보여야 한다.</li>
+    <li>하나의 속성은 <strong>하나의 값</strong>만 가진다(원자값).</li>
+    <li>주식별자에 <strong>함수적으로 종속</strong>된다(기본키가 정해지면 값이 하나로 결정됨).</li>
+  </ul>
+  <h4 class="sub3">속성의 분류</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>기준</th><th>종류</th><th>설명 (예)</th></tr></thead>
+    <tbody>
+      <tr><td rowspan="3"><strong>특성에 따라</strong></td><td>기본 속성</td><td>업무에서 그대로 가져온 것 (이름, 계좌번호)</td></tr>
+      <tr><td>설계 속성</td><td>관리를 위해 새로 만든 것 (상품코드, 지점코드)</td></tr>
+      <tr><td>파생 속성</td><td>다른 값에서 <strong>계산</strong>해 나온 것 (합계, 평균, 나이)</td></tr>
+      <tr><td rowspan="3"><strong>분해 여부</strong></td><td>단일 속성</td><td>더 못 쪼갬 (성별, 나이)</td></tr>
+      <tr><td>복합 속성</td><td>여러 의미로 분해 가능 (주소 = 시+구+동)</td></tr>
+      <tr><td>다중값 속성</td><td>한 속성에 값이 여러 개 (여러 전화번호) → <strong>별도 엔터티로 분리</strong></td></tr>
+    </tbody>
+  </table></div>
+  <div class="eli5"><span class="eli5__label">🔎 파생 속성 주의</span><p><strong>파생 속성</strong>은 계산으로 얻어지므로, 중복 저장하면 원본이 바뀔 때 안 맞게 됩니다. 꼭 필요할 때만(성능상 이유) 두고, 보통은 <strong>조회 시 계산</strong>합니다.</p></div>
+  <div class="card--cream card" style="margin-top:20px;"><div class="eyebrow" style="margin-bottom:6px;">도메인(Domain)</div><p style="margin:0;font-size:15px;">속성이 가질 수 있는 <strong>값의 범위·타입</strong>. 예: '성별'의 도메인은 {남, 여}, '나이'의 도메인은 0 이상의 정수. 제약조건(CHECK)으로 구현됩니다.</p></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;"계산으로 얻는 값" → <strong>파생 속성</strong>. "하나의 속성에 값이 여러 개" → <strong>다중값 속성</strong>(1정규화 대상). "값의 범위" → <strong>도메인</strong>.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">8. 관계 (Relationship)</h3>
+  <p class="lead">엔터티 사이의 <strong>연관성</strong>. "회원은 주문을 한다"처럼 엔터티를 이어줍니다.</p>
+  <div class="two-col">
+    <div class="card"><div class="eyebrow" style="margin-bottom:6px;">존재 관계</div><p style="margin:0;font-size:15px;">상태로 엮임. 예: 사원이 <strong>특정 부서에 소속</strong>된다.</p></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:6px;">행위 관계</div><p style="margin:0;font-size:15px;">행동으로 엮임. 예: 고객이 상품을 <strong>주문한다</strong>.</p></div>
+  </div>
+  <h4 class="sub3">관계 차수(Cardinality) — 몇 대 몇인가</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>차수</th><th>의미</th><th>예</th></tr></thead>
+    <tbody>
+      <tr><td><strong>1 : 1</strong></td><td>서로 하나씩 대응</td><td>사원 ↔ 사원증</td></tr>
+      <tr><td><strong>1 : N</strong></td><td>한쪽 하나에 상대는 여럿</td><td>고객 1 → 주문 N</td></tr>
+      <tr><td><strong>M : N</strong></td><td>양쪽 모두 여럿 → <strong>해소 필요</strong></td><td>학생 ↔ 과목</td></tr>
+    </tbody>
+  </table></div>
+  <div class="eli5"><span class="eli5__label">🔎 M:N 관계 해소</span><p>학생 한 명이 여러 과목을, 한 과목에 여러 학생이 수강 → <strong>M:N</strong>. 이대로 두면 조인이 꼬이므로, 가운데에 <strong>교차(연결) 엔터티</strong> '수강'을 넣어 <strong>학생 1:N 수강 N:1 과목</strong>으로 풉니다. 교차 엔터티는 두 부모의 식별자를 물려받습니다.</p></div>
+  <p class="dcap">M : N 관계 해소 — 가운데 교차(연결) 엔터티로 분리</p>
+  <div class="flow">
+    <div class="flow__box"><b>학생</b></div>
+    <div class="flow__arrow">1 : N</div>
+    <div class="flow__box flow__box--on"><b>수강</b><span>교차 엔터티</span></div>
+    <div class="flow__arrow">N : 1</div>
+    <div class="flow__box"><b>과목</b></div>
+  </div>
+  <h4 class="sub3">관계 읽는 법 (ERD 해석)</h4>
+  <p>"한 명의 <strong>고객</strong>은 여러 개의 <strong>주문</strong>을 <strong>할 수 있다</strong>" → 고객 : 주문 = 1 : N, 선택적. 관계선을 <strong>양방향으로 한 문장씩</strong> 읽는 것이 요령입니다.</p>
+  <h4 class="sub3">식별 관계 vs 비식별 관계</h4>
+  <div class="two-col">
+    <div class="fcard fcard--teal"><h3>식별 관계 <span style="font-size:12px;opacity:.8;">(실선)</span></h3><p>부모의 기본키를 자식의 <strong>기본키 일부</strong>로 상속. 부모가 있어야 자식이 존재(강한 종속). 예: 주문ID를 주문상세의 PK 일부로.</p></div>
+    <div class="fcard fcard--lavender"><h3>비식별 관계 <span style="font-size:12px;opacity:.7;">(점선)</span></h3><p>부모의 기본키를 자식의 <strong>일반 속성(FK)</strong>으로만 참조. 부모 없이도 자식이 존재 가능(약한 종속). 예: 부서코드를 사원의 일반 컬럼으로.</p></div>
+  </div>
+  <h4 class="sub3">ERD 표기법 — IE vs 바커</h4>
+  <div class="two-col">
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">IE (정보공학 · 까마귀발)</div><p style="margin:0;font-size:14.5px;">다수(N)를 <strong>까마귀발</strong>로, 필수를 막대(<code>|</code>), 선택을 고리(<code>○</code>)로 표현. 가장 널리 쓰입니다.</p></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">바커(Barker)</div><p style="margin:0;font-size:14.5px;">관계선의 <strong>실선=필수, 점선=선택</strong>으로 선택성을 표현. Oracle 계열에서 사용.</p></div>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;두 표기법 공통으로 <strong>까마귀발 = 다수(N)</strong>. <strong>○(고리) = 0개 가능(선택)</strong>. 식별 관계는 실선(PK 상속), 비식별 관계는 점선(일반 FK).</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">9. 식별자 (Identifier)</h3>
+  <p class="lead">엔터티의 각 인스턴스를 <strong>유일하게 구분</strong>하는 속성(또는 속성 묶음). 테이블의 <strong>기본키(PK)</strong>가 됩니다.</p>
+  <h4 class="sub3">주식별자(기본키)의 4대 조건 — '유·최·대·불'</h4>
+  <div class="two-col">
+    <div class="fcard fcard--pink"><span class="fnum">1</span><h3>유일성</h3><p>인스턴스를 <strong>유일하게</strong> 식별한다. (중복·NULL 불가)</p></div>
+    <div class="fcard fcard--ochre"><span class="fnum">2</span><h3>최소성</h3><p>유일성을 만족하는 <strong>최소한의 속성</strong>으로만 구성.</p></div>
+    <div class="fcard fcard--lavender"><span class="fnum">3</span><h3>대표성</h3><p>엔터티를 <strong>대표</strong>할 수 있어야 한다.</p></div>
+    <div class="fcard fcard--peach"><span class="fnum">4</span><h3>불변성</h3><p>값이 자주 <strong>바뀌지 않아야</strong> 한다.</p></div>
+  </div>
+  <h4 class="sub3">키(Key)의 종류</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>키</th><th>설명</th></tr></thead>
+    <tbody>
+      <tr><td><strong>기본키</strong> (Primary)</td><td>후보키 중 대표로 선정된 키. 유일성+최소성+NOT NULL</td></tr>
+      <tr><td><strong>후보키</strong> (Candidate)</td><td>유일성 + 최소성을 만족하는 키(기본키 후보들)</td></tr>
+      <tr><td><strong>슈퍼키</strong> (Super)</td><td>유일성 O, 최소성 X (불필요한 속성이 더 붙은 키)</td></tr>
+      <tr><td><strong>대체키</strong> (Alternate)</td><td>후보키 중 기본키로 뽑히지 <strong>않은</strong> 나머지</td></tr>
+      <tr><td><strong>외래키</strong> (Foreign)</td><td>다른 테이블의 PK를 참조. <strong>참조 무결성</strong>을 담당</td></tr>
+    </tbody>
+  </table></div>
+  <h4 class="sub3">식별자의 4가지 분류 + 본질/인조</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>기준</th><th>종류</th></tr></thead>
+    <tbody>
+      <tr><td>대표성</td><td>주식별자 / 보조 식별자</td></tr>
+      <tr><td>스스로 생성 여부</td><td>내부 식별자(스스로, 부서코드) / 외부 식별자(관계로 상속, 주문의 고객ID)</td></tr>
+      <tr><td>속성 수</td><td>단일 식별자 / <strong>복합</strong> 식별자</td></tr>
+      <tr><td>대체 여부</td><td><strong>본질</strong> 식별자(업무서 자연 발생) / <strong>인조</strong> 식별자(인위적 대리키)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="two-col">
+    <div class="fcard fcard--mint"><h3>본질 식별자</h3><p>현실의 고유 속성을 그대로 사용 (학번, 사번). = 원조 식별자.</p></div>
+    <div class="fcard fcard--peach"><h3>인조 식별자</h3><p>복합식별자가 복잡할 때 인위적으로 만든 <strong>대리키</strong> (주문상세번호=순번).</p></div>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>함정</b> &nbsp;속성 수 분류는 단일/<strong>복합</strong>. '다중값 식별자'는 없는 말(함정)! 참조 무결성 → <strong>외래키</strong>. 유일성은 있지만 최소성이 없으면 → <strong>슈퍼키</strong>.</p></div>
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 키</div>
+    <div class="quiz__q">참조 무결성과 관련된 데이터베이스 키는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>기본키</button>
+      <button class="opt"><span class="opt__key">2</span>슈퍼키</button>
+      <button class="opt"><span class="opt__key">3</span>외래키</button>
+      <button class="opt"><span class="opt__key">4</span>대체키</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③ 외래키</b> 외래키는 다른 테이블의 PK를 참조하며, 참조 무결성(부모에 없는 값을 자식이 가질 수 없음)을 확인하는 키입니다.</div>
+  </div>
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 식별자</div>
+    <div class="quiz__q">데이터베이스 식별자 분류로 올바르지 <u>않은</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>생성 여부 → 내부 / 외부 식별자</button>
+      <button class="opt"><span class="opt__key">2</span>대체 여부 → 본질 / 인조 식별자</button>
+      <button class="opt"><span class="opt__key">3</span>대표성 → 주식별자 / 보조 식별자</button>
+      <button class="opt"><span class="opt__key">4</span>속성 수 → 단일 / 다중값 식별자</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> 속성 수에 따른 분류는 단일 / <strong>복합</strong> 식별자입니다. '다중값 식별자'라는 용어는 없습니다.</div>
+  </div>
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">❓ OX 퀴즈 · 엔터티</div>
+    <div class="quiz__q">"엔터티는 속성이 1개여도 성립한다." — 맞으면 O, 틀리면 X</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">O</span>O (맞다)</button>
+      <button class="opt"><span class="opt__key">X</span>X (틀리다)</button>
+    </div>
+    <div class="quiz__exp"><b>정답 X</b> 엔터티는 <strong>속성 2개 이상·인스턴스 2개 이상</strong>을 가져야 합니다(업·식·인·속·관).</div>
+  </div>
+
+  <div class="card--cream card" style="margin-top:28px;"><div class="eyebrow" style="margin-bottom:8px;">⏱️ 1과목 1-1 한눈에</div><p style="margin:0;font-size:15.5px;">모델링 3단계 <strong>개념→논리→물리</strong>. ERD 6단계(도출·배치·관계·관계명·참여도·필수). 엔터티=<strong>업식인속관</strong>. 속성=기본·설계·<strong>파생</strong> / 단일·복합·<strong>다중값</strong>. 관계 M:N은 <strong>교차 엔터티</strong>로 해소. 식별자 4조건 <strong>유최대불</strong>, 키 5종(기본·후보·슈퍼·대체·<strong>외래=참조무결성</strong>).</p></div>
+</div></section>
+</section>
+
+<!-- ================= CH 2-2 ================= -->
+<section class="panel" id="ch22">
+<section class="tile tile--parchment"><div class="wrap">
+<div class="phead">
+    <div class="eyebrow">1과목 · 1-2 데이터 모델과 성능</div>
+    <h1 class="display-lg">데이터 모델과 성능</h1>
+    <p class="sub">정규화·반정규화·트랜잭션·분산DB를 다룹니다. 특히 <strong>정규화 1~3단계</strong>는 거의 매번 나오는 핵심 — 아래에서 실제 표를 직접 쪼개보며 익힙니다.</p>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">1. 정규화 (Normalization) <span class="pill pill--pink" style="font-size:12px;vertical-align:middle;">최빈출</span></h3>
+  <p class="lead">데이터 정합성(정확성·일관성)을 위해 <strong>중복을 제거</strong>하고 테이블을 작은 단위로 나누는 과정입니다.</p>
+  <div class="eli5"><span class="eli5__label">💡 쉽게 말하면</span><p>정규화는 <strong>'중복 정리정돈'</strong>이에요. 한 표에 같은 정보가 여기저기 반복되면 수정할 때 다 바꿔야 하고 실수가 생기죠. 그래서 겹치는 걸 떼어내 표를 쪼갭니다. 대신 표가 늘어나 조회 때 <strong>조인(JOIN)</strong>이 많아질 수 있어요.</p></div>
+
+  <h4 class="sub3">왜 하나요? — 정규화를 안 하면 생기는 '이상현상'</h4>
+  <p class="note">아래처럼 한 표에 다 몰아넣으면(비정규형) 세 가지 문제가 생깁니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>주문번호</th><th>회원명</th><th>회원등급</th><th>등급할인율</th><th>상품명</th></tr></thead>
+    <tbody>
+      <tr><td>1001</td><td>김철수</td><td>VIP</td><td>10%</td><td>사과</td></tr>
+      <tr><td>1002</td><td>김철수</td><td>VIP</td><td>10%</td><td>배</td></tr>
+      <tr><td>1003</td><td>이영희</td><td>일반</td><td>0%</td><td>포도</td></tr>
+    </tbody>
+  </table></div>
+  <div class="three-col">
+    <div class="fcard fcard--peach"><span class="fnum">삽입 이상</span><h3>Insertion</h3><p>주문하지 않은 신규 회원은 주문번호(PK)가 없어 <strong>등록조차 못 함</strong>.</p></div>
+    <div class="fcard fcard--peach"><span class="fnum">갱신 이상</span><h3>Update</h3><p>VIP 할인율을 15%로 바꾸려면 <strong>모든 행</strong>을 고쳐야 하고, 하나라도 놓치면 값이 안 맞음.</p></div>
+    <div class="fcard fcard--peach"><span class="fnum">삭제 이상</span><h3>Deletion</h3><p>주문 1003을 지우면 '이영희'와 '일반 등급' 정보까지 <strong>함께 사라짐</strong>.</p></div>
+  </div>
+  <p>정규화는 이 세 가지 이상현상을 없애기 위해, 서로 다른 주제를 <strong>별도 테이블로 분리</strong>하는 작업입니다.</p>
+
+  <h4 class="sub3">함수적 종속 (Functional Dependency)</h4>
+  <p>정규화를 이해하는 열쇠입니다. <strong>A → B</strong> 는 "A가 정해지면 B가 하나로 결정된다"는 뜻. 예) 회원ID → 회원명(회원ID가 같으면 이름도 같다). 이때 A를 <strong>결정자</strong>라고 부릅니다.</p>
+
+  <h4 class="sub3">정규화 단계 — 표를 직접 쪼개보기</h4>
+  <div class="steps">
+    <div class="step"><span class="step__n">1</span><div><h4>제1정규형 (1NF) — 원자값</h4><p>모든 칸은 <strong>하나의 값</strong>만. 반복 그룹·다중값을 없앱니다. 예) '취미=등산,독서' → 한 칸에 하나씩 행을 나눔.</p></div></div>
+    <div class="step"><span class="step__n">2</span><div><h4>제2정규형 (2NF) — 부분함수 종속 제거</h4><p>복합키(2개 이상)일 때, 키의 <strong>일부에만</strong> 딸린 속성을 분리. 예) PK=(주문번호,상품코드)인데 '상품명'이 상품코드에만 종속 → 상품 테이블로 분리.</p></div></div>
+    <div class="step"><span class="step__n">3</span><div><h4>제3정규형 (3NF) — 이행함수 종속 제거</h4><p>키가 아닌 일반 속성끼리의 종속을 분리. 예) 회원등급 → 등급할인율(둘 다 일반 속성) → 등급 테이블로 분리.</p></div></div>
+  </div>
+
+  <p class="note">위 비정규형 표를 3NF까지 쪼개면 이렇게 됩니다 👇</p>
+  <div class="three-col">
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">회원</div><div class="tablewrap" style="margin:0;"><table><thead><tr><th>회원ID</th><th>회원명</th><th>등급</th></tr></thead><tbody><tr><td>M01</td><td>김철수</td><td>VIP</td></tr><tr><td>M02</td><td>이영희</td><td>일반</td></tr></tbody></table></div></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">등급</div><div class="tablewrap" style="margin:0;"><table><thead><tr><th>등급</th><th>할인율</th></tr></thead><tbody><tr><td>VIP</td><td>10%</td></tr><tr><td>일반</td><td>0%</td></tr></tbody></table></div></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">주문</div><div class="tablewrap" style="margin:0;"><table><thead><tr><th>주문번호</th><th>회원ID</th><th>상품</th></tr></thead><tbody><tr><td>1001</td><td>M01</td><td>사과</td></tr><tr><td>1003</td><td>M02</td><td>포도</td></tr></tbody></table></div></div>
+  </div>
+  <p>이제 VIP 할인율은 <strong>등급 테이블 한 줄</strong>만 고치면 되고(갱신 이상 해결), 주문이 없어도 회원을 등록할 수 있습니다(삽입 이상 해결).</p>
+
+  <p class="dcap">정규화 단계 — 뒤로 갈수록 중복이 줄고 테이블이 늘어난다</p>
+  <div class="flow">
+    <div class="flow__box"><b>비정규형</b><span>중복·이상현상</span></div>
+    <div class="flow__arrow flow__arrow--dir">→</div>
+    <div class="flow__box"><b>1NF</b><span>원자값</span></div>
+    <div class="flow__arrow flow__arrow--dir">→</div>
+    <div class="flow__box"><b>2NF</b><span>부분종속 제거</span></div>
+    <div class="flow__arrow flow__arrow--dir">→</div>
+    <div class="flow__box flow__box--on"><b>3NF</b><span>이행종속 제거</span></div>
+  </div>
+  <div class="tip"><span class="tip__dot">★</span><p><b>암기팁</b> &nbsp;<strong>1정규화=여러 값/반복</strong>, <strong>2정규화=부분 종속</strong>(복합키 일부에만), <strong>3정규화=이행 종속</strong>(A→B→C라 A→C). "<u>부분</u>" 보이면 2, "<u>이행</u>" 보이면 3!</p></div>
+
+  <h4 class="sub3">BCNF (보이스-코드 정규형)</h4>
+  <p>제3정규형을 더 강화한 단계. <strong>모든 결정자가 후보키여야 한다</strong>는 규칙으로, "후보키가 아닌데 다른 속성을 결정하는" 결정자를 분리합니다. 정규화 순서는 <strong>1 → 2 → 3 → BCNF → 4 → 5</strong>이며, 시험에선 "3정규형보다 강한 정규형 = BCNF" 정도만 알면 됩니다.</p>
+
+  <div class="card--cream card" style="margin:16px 0;"><p style="margin:0;font-size:15px;"><strong>정규화 ↔ 성능</strong> &nbsp;입력·수정·삭제 성능은 <strong>일반적으로 향상</strong>(중복이 없으니 한 곳만 고침), 조회 성능은 <strong>향상되거나 저하</strong>(테이블이 늘어 조인이 많아지면 느려질 수 있음). 중복↓·무결성↑·저장공간↓.</p></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;"정규화하면 조회 성능이 <strong>반드시</strong> 향상" → <u>틀림</u>(조인 때문에 저하될 수 있음). 정규화할수록 <strong>테이블(엔터티)은 증가</strong>.</p></div>
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 정규화</div>
+    <div class="quiz__q">정규화에 대한 설명으로 <u>틀린</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>데이터 중복을 제거해 이상현상을 줄인다.</button>
+      <button class="opt"><span class="opt__key">2</span>정규화할수록 엔터티(테이블)는 증가한다.</button>
+      <button class="opt"><span class="opt__key">3</span>입력·수정·삭제 성능은 일반적으로 향상된다.</button>
+      <button class="opt"><span class="opt__key">4</span>조회 성능이 반드시 향상된다.</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> 테이블이 늘면 조인이 늘어 조회 성능은 <strong>저하될 수도</strong> 있습니다. '반드시 향상'은 틀림.</div>
+  </div>
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 정규형 판별</div>
+    <div class="quiz__q">PK가 (주문번호, 상품코드)인 테이블에서 '상품명'이 상품코드에만 종속되어 분리해야 한다. 어떤 정규화인가?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>제1정규화 (원자값)</button>
+      <button class="opt"><span class="opt__key">2</span>제2정규화 (부분함수 종속 제거)</button>
+      <button class="opt"><span class="opt__key">3</span>제3정규화 (이행함수 종속 제거)</button>
+      <button class="opt"><span class="opt__key">4</span>BCNF</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> 복합키의 <strong>일부(상품코드)에만</strong> 종속되는 부분함수 종속 → 제2정규화.</div>
+  </div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">2. 반정규화 (De-Normalization)</h3>
+  <p class="lead">조회 성능을 위해 <strong>의도적으로 중복을 허용</strong>하는 과정. <strong>정규화를 끝낸 뒤</strong> 성능 문제가 있을 때만 신중히 적용합니다.</p>
+  <div class="card--cream card" style="margin:16px 0;"><p style="margin:0;font-size:15px;">조회 성능 ↑, 그러나 입력·수정·삭제 성능 ↓ + <strong>정합성(무결성) 저해</strong> 위험. 공짜가 아니라 '트레이드오프'입니다.</p></div>
+  <h4 class="sub3">반정규화 기법</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>대상</th><th>기법</th></tr></thead>
+    <tbody>
+      <tr><td><strong>테이블</strong></td><td>병합(1:1, 1:M) · 분할(수직·수평) · 추가(<strong>중복·통계·이력·부분</strong>)</td></tr>
+      <tr><td><strong>컬럼</strong></td><td>중복 컬럼 추가 · 파생 컬럼 추가 · 이력 컬럼 추가</td></tr>
+      <tr><td><strong>관계</strong></td><td>중복 관계 추가</td></tr>
+    </tbody>
+  </table></div>
+  <div class="two-col">
+    <div class="card"><div class="eyebrow" style="margin-bottom:6px;">수직 분할</div><p style="margin:0;font-size:14.5px;">일부 <strong>컬럼</strong>을 떼어 별도 테이블로 → <strong>1:1</strong> 관계. 자주 안 쓰는 컬럼·NULL 많은 컬럼 분리.</p></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:6px;">수평 분할</div><p style="margin:0;font-size:14.5px;">일부 <strong>행</strong>을 기준(주로 기간)으로 분할 = <strong>파티셔닝</strong>.</p></div>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;수직=컬럼 분할(1:1), 수평=행 분할(파티셔닝). 테이블 추가 기법 = 중복·통계·이력·부분. <strong>'백업 테이블 추가'는 반정규화가 아님</strong>(함정).</p></div>
+
+  <h4 class="sub3">슈퍼타입 / 서브타입 변환</h4>
+  <p>공통 속성(슈퍼타입)과 개별 속성(서브타입)으로 나뉜 모델을 실제 테이블로 바꾸는 3가지 방식입니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>방식</th><th>구성</th><th>특징</th></tr></thead>
+    <tbody>
+      <tr><td>One To One</td><td>슈퍼·서브 <strong>각각</strong> 테이블</td><td>테이블 多, 조인 多, 관리 어려움</td></tr>
+      <tr><td>Plus</td><td>슈퍼 + 서브 테이블</td><td>조인 발생, 절충형</td></tr>
+      <tr><td><strong>Single</strong></td><td><strong>하나의 테이블</strong>로 통합</td><td>조인 성능 best·관리 편리 / NULL 多·I/O 나쁨</td></tr>
+    </tbody>
+  </table></div>
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 반정규화</div>
+    <div class="quiz__q">테이블 추가 반정규화 기법이 <u>아닌</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>통계 테이블 추가</button>
+      <button class="opt"><span class="opt__key">2</span>백업 테이블 추가</button>
+      <button class="opt"><span class="opt__key">3</span>이력 테이블 추가</button>
+      <button class="opt"><span class="opt__key">4</span>부분 테이블 추가</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> 테이블 추가 기법 = 중복·통계·이력·부분. '백업'은 포함되지 않습니다.</div>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">3. 관계와 성능 — 식별 vs 비식별</h3>
+  <p>식별/비식별 관계 선택은 성능에 직결됩니다. 자식이 부모 키를 PK로 물려받는 식별 관계가 쌓이면 <strong>PK가 계속 커져</strong> 조인·인덱스에 부담이 됩니다.</p>
+  <div class="two-col">
+    <div class="fcard fcard--teal"><h3>식별 관계가 많으면</h3><p>자식 PK에 부모 키가 누적 → PK 컬럼 수↑, 인덱스 커짐. 단, 상위 키로 바로 조회 가능(조인 유리할 때도).</p></div>
+    <div class="fcard fcard--lavender"><h3>비식별 관계가 많으면</h3><p>PK는 간결(FK는 일반 컬럼). 대신 상위 정보를 얻으려면 조인이 늘 수 있음.</p></div>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;무조건 식별/비식별이 좋은 게 아니라 <strong>업무·조회 패턴에 따라 선택</strong>. 식별 관계 남용 → PK 상속 누적으로 과도한 조인/인덱스 비대.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">4. 트랜잭션 (Transaction)</h3>
+  <p class="lead">데이터를 조작하는 <strong>하나의 논리적 작업 단위</strong>. "전부 성공 아니면 전부 취소"로 묶이는 작업입니다.</p>
+  <div class="eli5"><span class="eli5__label">💡 쉽게 말하면</span><p>쇼핑몰 결제 = '결제 성공' + '재고 차감'이 <strong>한 묶음</strong>. 재고 차감이 실패하면 결제도 <strong>롤백(취소)</strong>돼야 하죠. 중간 상태는 없습니다.</p></div>
+  <h4 class="sub3">트랜잭션 4대 특성 — ACID (원·일·고·지)</h4>
+  <div class="two-col">
+    <div class="fcard fcard--pink"><h3>원자성 (Atomicity)</h3><p>전부 반영되거나 전부 취소. 중간은 없다.</p></div>
+    <div class="fcard fcard--lavender"><h3>일관성 (Consistency)</h3><p>실행 전후 데이터가 모순 없이 일관된 상태 유지.</p></div>
+    <div class="fcard fcard--ochre"><h3>고립성 (Isolation)</h3><p>실행 중 다른 트랜잭션이 끼어들지 못함.</p></div>
+    <div class="fcard fcard--teal"><h3>지속성 (Durability)</h3><p>완료(COMMIT)된 결과는 영구히 보존.</p></div>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;"전부 아니면 전무" → <strong>원자성</strong>. "다른 트랜잭션 간섭 차단" → <strong>고립성</strong>. "완료 후 영구 보존" → <strong>지속성</strong>. COMMIT/ROLLBACK은 TCL(ch3-3에서).</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">5. NULL 처리</h3>
+  <p class="lead">값이 <strong>존재하지 않음</strong>(미지·미입력). 숫자 0이나 공백 문자('')와는 다릅니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>상황</th><th>NULL 처리</th></tr></thead>
+    <tbody>
+      <tr><td><strong>가로 연산</strong> (수입 − 지출 등 컬럼끼리)</td><td>하나라도 NULL이면 결과는 <strong>NULL</strong></td></tr>
+      <tr><td><strong>세로 연산</strong> (SUM·AVG 등 집계)</td><td>NULL을 <strong>제외</strong>하고 계산</td></tr>
+      <tr><td>NULL 비교 (COL &gt; 5, COL = NULL)</td><td>참이 아니라 <strong>UNKNOWN</strong> → 결과에서 빠짐</td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;① NULL ≠ 0, NULL ≠ '' &nbsp;② NULL과의 사칙연산 결과 = NULL &nbsp;③ 집계함수(SUM/AVG/COUNT(컬럼))는 NULL 제외, <strong>단 COUNT(*)는 NULL 포함</strong>해 전체 행을 셈 &nbsp;④ NULL 비교는 <code>IS NULL</code>로만.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">6. 분산 데이터베이스</h3>
+  <p class="lead">데이터를 <strong>여러 물리적 장소(서버)</strong>에 나눠 저장하되, 사용자에게는 <strong>하나의 DB처럼</strong> 보이게 하는 방식입니다.</p>
+  <div class="two-col">
+    <div class="card"><div class="eyebrow" style="margin-bottom:6px;">장점</div><p style="margin:0;font-size:14.5px;">지역 DB에서 빠르게 처리(응답↑), 장애 시 다른 서버가 대신(가용성↑), 확장 용이.</p></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:6px;">단점</div><p style="margin:0;font-size:14.5px;">여러 DB라 <strong>관리·보안·설계가 복잡</strong>, 데이터 일관성 유지가 어려움, 비용↑.</p></div>
+  </div>
+  <h4 class="sub3">분산 투명성 6가지 — 사용자는 몰라도 된다</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>투명성</th><th>의미 (사용자는 ~를 몰라도 된다)</th></tr></thead>
+    <tbody>
+      <tr><td><strong>분할(단편화)</strong></td><td>데이터가 여러 조각으로 나뉘어 저장된 것</td></tr>
+      <tr><td><strong>위치</strong></td><td>데이터가 어느 서버(위치)에 있는지</td></tr>
+      <tr><td><strong>지역사상</strong></td><td>지역 DBMS 이름·종류 같은 로컬 세부사항</td></tr>
+      <tr><td><strong>중복(복제)</strong></td><td>같은 데이터가 여러 곳에 복제된 것</td></tr>
+      <tr><td><strong>장애</strong></td><td>일부 서버 장애가 나도 정상 동작</td></tr>
+      <tr><td><strong>병행</strong></td><td>여러 트랜잭션이 동시에 수행되는 것</td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;"어디 있는지 몰라도 된다" → <strong>위치 투명성</strong>. "복제본이 여러 개인 걸 몰라도 된다" → <strong>중복 투명성</strong>. 보기에서 <strong>없는 투명성</strong>(예: '보안 투명성')을 고르는 함정이 자주 나옵니다.</p></div>
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 분산 투명성</div>
+    <div class="quiz__q">분산 데이터베이스의 투명성 유형이 <u>아닌</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>위치 투명성</button>
+      <button class="opt"><span class="opt__key">2</span>중복(복제) 투명성</button>
+      <button class="opt"><span class="opt__key">3</span>보안 투명성</button>
+      <button class="opt"><span class="opt__key">4</span>장애 투명성</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> 분산 투명성 6종 = 분할·위치·지역사상·중복·장애·병행. '보안 투명성'은 없는 용어입니다.</div>
+  </div>
+
+  <div class="card--cream card" style="margin-top:28px;"><div class="eyebrow" style="margin-bottom:8px;">⏱️ 1과목 1-2 한눈에</div><p style="margin:0;font-size:15.5px;">정규화: 이상현상(삽입·갱신·삭제) 제거 → <strong>1NF(원자값)·2NF(부분종속)·3NF(이행종속)</strong>, 조회는 느려질 수 있음. 반정규화: 조회↑ 대신 정합성↓(중복·통계·이력·부분 / <strong>백업은 아님</strong>). 트랜잭션 <strong>ACID</strong>. NULL은 집계서 제외·COUNT(*)만 포함. 분산 투명성 = 분할·위치·지역사상·중복·장애·병행.</p></div>
+</div></section>
+</section>
+
+<!-- ================= CH 3-1 ================= -->
+<section class="panel" id="ch31">
+<section class="tile tile--parchment"><div class="wrap">
+<div class="phead">
+    <div class="eyebrow">2과목 · 2-1 SQL 기본</div>
+    <h1 class="display-lg">SQL 기본</h1>
+    <p class="sub">2과목은 40문항(전체의 80%)으로 <strong>합격의 핵심</strong>입니다. 여기선 관계형 DB 개념 → SELECT 조회 → 조건(WHERE) → 정렬 → 단골 출제 <strong>함수</strong>까지, 눈으로 결과를 보며 익힙니다.</p>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">1. 관계형 데이터베이스 기본</h3>
+  <div class="eli5"><span class="eli5__label">💡 쉽게 말하면</span><p>관계형 DB는 모든 데이터를 <strong>엑셀 같은 2차원 표</strong>로 저장합니다. 가로줄 = 행(Row), 세로칸 = 열(Column). SQL은 이 표에 "조회/추가/수정/삭제해줘"라고 말하는 <strong>DB 전용 언어</strong>예요.</p></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>데이터 모델 용어 (설계)</th><th>DB 테이블 용어 (SQL)</th></tr></thead>
+    <tbody>
+      <tr><td>엔터티(Entity)</td><td><strong>테이블</strong>(Table)</td></tr>
+      <tr><td>인스턴스(행)</td><td><strong>로우</strong>(Row / 레코드)</td></tr>
+      <tr><td>속성(Attribute)</td><td><strong>컬럼</strong>(Column)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="tip__dot">★</span><p><b>SQL 명령어 4종</b> &nbsp;<strong>DML</strong>(SELECT·INSERT·UPDATE·DELETE), <strong>DDL</strong>(CREATE·ALTER·DROP), <strong>DCL</strong>(GRANT·REVOKE), <strong>TCL</strong>(COMMIT·ROLLBACK). 자세한 건 '관리 구문'에서.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">2. SELECT — 데이터 조회의 기본</h3>
+  <p>아래 <strong>EMP(사원)</strong> 테이블로 모든 예제를 설명합니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>EMPNO</th><th>ENAME</th><th>DEPT</th><th>SAL</th><th>COMM</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>김철수</td><td>영업</td><td>3000</td><td>500</td></tr>
+      <tr><td>2</td><td>이영희</td><td>인사</td><td>2500</td><td>(NULL)</td></tr>
+      <tr><td>3</td><td>박민수</td><td>영업</td><td>4000</td><td>300</td></tr>
+      <tr><td>4</td><td>최지은</td><td>개발</td><td>3500</td><td>(NULL)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="codeblock"><span class="kw">SELECT</span> ENAME, SAL    <span class="cm">-- 조회할 컬럼 (* 는 전체 컬럼)</span>
+<span class="kw">FROM</span>   EMP E          <span class="cm">-- 테이블 + 별칭(Alias) E</span>
+<span class="kw">WHERE</span>  DEPT = <span class="st">'영업'</span>   <span class="cm">-- 조건 (없으면 전체 행)</span>
+<span class="kw">ORDER BY</span> SAL <span class="kw">DESC</span>;    <span class="cm">-- 정렬 (내림차순)</span></div>
+  <p class="note">↓ 결과</p>
+  <div class="tablewrap"><table><thead><tr><th>ENAME</th><th>SAL</th></tr></thead><tbody><tr><td>박민수</td><td>4000</td></tr><tr><td>김철수</td><td>3000</td></tr></tbody></table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;테이블에 <strong>별칭</strong>을 붙이면 그 뒤로는 반드시 별칭을 씁니다(<code>FROM EMP E</code> → <code>E.SAL</code>). 컬럼 별칭에 공백·특수문자가 있으면 <code>"큰따옴표"</code>. 문자열 값은 <code>'작은따옴표'</code>. 연결은 <code>||</code> (예: <code>ENAME||'님'</code>).</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">3. WHERE 조건 — 연산자 총정리</h3>
+  <p>원하는 행만 걸러내는 조건입니다. 자주 나오는 연산자를 예제와 함께 봅니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>연산자</th><th>의미</th><th>예</th></tr></thead>
+    <tbody>
+      <tr><td><code>= &gt; &lt; &gt;= &lt;= &lt;&gt;</code></td><td>비교 (<code>&lt;&gt;</code>=같지 않음)</td><td><code>SAL &gt;= 3000</code></td></tr>
+      <tr><td><code>BETWEEN a AND b</code></td><td>a 이상 b 이하 (<strong>양끝 포함</strong>)</td><td><code>SAL BETWEEN 3000 AND 4000</code></td></tr>
+      <tr><td><code>IN (a, b, c)</code></td><td>목록 중 하나와 일치</td><td><code>DEPT IN ('영업','개발')</code></td></tr>
+      <tr><td><code>LIKE '패턴'</code></td><td>문자 패턴 매칭</td><td><code>ENAME LIKE '김%'</code></td></tr>
+      <tr><td><code>IS NULL / IS NOT NULL</code></td><td>NULL 여부 (<code>=NULL</code> 불가!)</td><td><code>COMM IS NULL</code></td></tr>
+    </tbody>
+  </table></div>
+  <h4 class="sub3">LIKE 와일드카드 — % 와 _</h4>
+  <div class="two-col">
+    <div class="fcard fcard--lavender"><h3><code>%</code> (퍼센트)</h3><p>0글자 이상 아무 문자. <code>'김%'</code>=김으로 시작, <code>'%수'</code>=수로 끝, <code>'%민%'</code>=민 포함.</p></div>
+    <div class="fcard fcard--peach"><h3><code>_</code> (언더바)</h3><p><strong>정확히 1글자</strong>. <code>'김_수'</code>=김?수(3글자, 김철수 O).</p></div>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;① <code>BETWEEN</code>은 <strong>양끝 포함</strong>. ② <strong>NULL은 <code>=</code>로 못 잡음</strong> → 반드시 <code>IS NULL</code>. ③ <code>NOT IN</code> 목록에 NULL이 섞이면 결과가 전부 빠질 수 있으니 주의. ④ 논리 연산자 우선순위 = <strong>NOT → AND → OR</strong> (OR는 괄호로 묶기).</p></div>
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">❓ 확인 퀴즈 · NULL 조건</div>
+    <div class="quiz__q">COMM이 비어있는(NULL) 사원을 조회하는 올바른 조건은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>WHERE COMM = NULL</button>
+      <button class="opt"><span class="opt__key">2</span>WHERE COMM = ''</button>
+      <button class="opt"><span class="opt__key">3</span>WHERE COMM IS NULL</button>
+      <button class="opt"><span class="opt__key">4</span>WHERE COMM != 0</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> NULL은 '값이 없음'이라 <code>=</code>로 비교하면 늘 거짓(UNKNOWN). 반드시 <code>IS NULL</code>을 씁니다.</div>
+  </div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">4. 정렬(ORDER BY) · 중복제거(DISTINCT)</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>구문</th><th>설명</th></tr></thead>
+    <tbody>
+      <tr><td><code>ORDER BY 컬럼 ASC</code></td><td>오름차순(기본값, 생략 가능)</td></tr>
+      <tr><td><code>ORDER BY 컬럼 DESC</code></td><td>내림차순</td></tr>
+      <tr><td><code>ORDER BY 2 DESC</code></td><td><strong>컬럼 순번</strong>으로 정렬(SELECT의 2번째 컬럼)</td></tr>
+      <tr><td><code>... NULLS LAST / FIRST</code></td><td>NULL을 뒤로/앞으로 (Oracle 기본: 오름차순 시 NULL이 뒤)</td></tr>
+      <tr><td><code>SELECT DISTINCT 부서</code></td><td>중복 제거하고 서로 다른 값만</td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;① ORDER BY는 <strong>SQL 실행의 맨 마지막</strong>(SELECT 다음). ② <code>DISTINCT A, B</code> = <code>GROUP BY A, B</code>(두 컬럼 조합의 중복 제거). ③ ORDER BY에는 SELECT의 별칭·순번도 사용 가능.</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">5. 문자 함수</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>함수</th><th>기능</th><th>예 → 결과</th></tr></thead>
+    <tbody>
+      <tr><td><code>LOWER / UPPER</code></td><td>소문자 / 대문자</td><td>UPPER('iu') → IU</td></tr>
+      <tr><td><code>SUBSTR(문자,시작[,길이])</code></td><td>일부 자르기 (시작은 <strong>1부터</strong>)</td><td>SUBSTR('블랙핑크제니',3,2) → 핑크</td></tr>
+      <tr><td><code>LENGTH</code></td><td>문자열 길이(글자 수)</td><td>LENGTH('블랙핑크') → 4</td></tr>
+      <tr><td><code>INSTR(문자,찾을것)</code></td><td>찾을 문자의 위치(없으면 0)</td><td>INSTR('ABCB','B') → 2</td></tr>
+      <tr><td><code>REPLACE(문자,전[,후])</code></td><td>치환(후 생략 시 제거)</td><td>REPLACE('제니','제니','지수') → 지수</td></tr>
+      <tr><td><code>LPAD / RPAD(문자,길이,채움)</code></td><td>왼/오른쪽을 채워 지정 길이로</td><td>LPAD('IU',4,'V') → VVIU</td></tr>
+      <tr><td><code>LTRIM / RTRIM / TRIM</code></td><td>왼/오른/양쪽 공백·지정문자 제거</td><td>TRIM('  IU  ') → IU</td></tr>
+      <tr><td><code>CONCAT(a,b)</code> / <code>||</code></td><td>문자열 연결</td><td>'A'||'B' → AB</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="tip__dot">★</span><p><b>핵심</b> &nbsp;<code>SUBSTR</code>의 시작 위치는 <strong>1부터</strong>(0 아님). <code>LTRIM/RTRIM</code>은 지정 문자를 여러 글자까지 비교, <code>TRIM</code>은 <strong>한 글자</strong>만 지정 가능. 길이 계산 시 한글 1자=보통 3byte(LENGTHB).</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">6. 숫자 함수</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>함수</th><th>기능</th><th>예 → 결과</th></tr></thead>
+    <tbody>
+      <tr><td><code>ABS</code></td><td>절댓값</td><td>ABS(-1) → 1</td></tr>
+      <tr><td><code>SIGN</code></td><td>부호 (양 1·음 −1·0)</td><td>SIGN(-7) → -1</td></tr>
+      <tr><td><code>ROUND(수[,자리])</code></td><td>반올림</td><td>ROUND(163.76, 1) → 163.8</td></tr>
+      <tr><td><code>TRUNC(수[,자리])</code></td><td>버림(절삭)</td><td>TRUNC(54.29, 1) → 54.2</td></tr>
+      <tr><td><code>CEIL</code> / <code>FLOOR</code></td><td>올림 / 내림(정수)</td><td>CEIL(72.1) → 73, FLOOR(72.9) → 72</td></tr>
+      <tr><td><code>MOD(수1, 수2)</code></td><td>나머지 (수2가 0이면 수1 반환)</td><td>MOD(15, 7) → 1</td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>헷갈림 주의</b> &nbsp;음수에서 <strong>CEIL(-33.4) = -33</strong>(올림이라 0에 가까움), <strong>FLOOR(-22.3) = -23</strong>(내림이라 더 작게). <code>MOD(n, 0) = n</code>. ROUND(반올림)·TRUNC(버림) 구분이 단골.</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">7. 날짜 · 변환 함수</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>함수</th><th>기능</th></tr></thead>
+    <tbody>
+      <tr><td><code>SYSDATE</code></td><td>현재 날짜·시간</td></tr>
+      <tr><td><code>EXTRACT(YEAR FROM 날짜)</code></td><td>연/월/일 등 특정 단위 추출</td></tr>
+      <tr><td><code>ADD_MONTHS(날짜, n)</code></td><td>n개월 더함 (해당 일자 없으면 <strong>그 달 말일</strong>)</td></tr>
+      <tr><td><code>TO_CHAR / TO_DATE / TO_NUMBER</code></td><td>문자↔날짜↔숫자 <strong>명시적</strong> 형변환</td></tr>
+    </tbody>
+  </table></div>
+  <div class="eli5"><span class="eli5__label">🔎 명시적 vs 암시적 형변환</span><p><strong>명시적:</strong> TO_CHAR 등 함수로 직접 변환. <strong>암시적:</strong> DB가 알아서 변환. 암시적은 <strong>인덱스를 못 써</strong> 성능이 나빠질 수 있어 명시적 변환을 권장합니다. 예) <code>ADD_MONTHS(DATE '2022-01-31', 1)</code> → 2월엔 31일이 없으니 <strong>2022-02-28</strong>.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">8. NULL 관련 함수 <span class="pill pill--pink" style="font-size:12px;vertical-align:middle;">빈출</span></h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>함수</th><th>동작</th><th>예 → 결과</th></tr></thead>
+    <tbody>
+      <tr><td><code>NVL(A, B)</code></td><td>A가 NULL이면 B, 아니면 A</td><td>NVL(COMM, 0)</td></tr>
+      <tr><td><code>NVL2(A, B, C)</code></td><td>A가 NULL이 <strong>아니면</strong> B, NULL이면 C</td><td>NVL2(COMM, '있음', '없음')</td></tr>
+      <tr><td><code>NULLIF(A, B)</code></td><td>A = B이면 NULL, 다르면 A</td><td>NULLIF(10, 10) → NULL</td></tr>
+      <tr><td><code>COALESCE(A, B, C …)</code></td><td>NULL이 <strong>아닌 최초</strong>의 값</td><td>COALESCE(NULL, NULL, 3) → 3</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="tip__dot">★</span><p><b>암기팁</b> &nbsp;NVL = "<strong>N</strong>ull이면 <strong>V</strong>alue로 대체". NVL2는 인수 3개(<u>아니면·맞으면</u> 순서 주의). COALESCE = 여러 개 중 첫 유효값.</p></div>
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 함수</div>
+    <div class="quiz__q">결과가 <u>다른</u> SQL은? (DUAL에서 실행)</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>SELECT ROUND(17.5) → 18</button>
+      <button class="opt"><span class="opt__key">2</span>SELECT CEIL(17.5) → 18</button>
+      <button class="opt"><span class="opt__key">3</span>SELECT TRUNC(18.5) → 18</button>
+      <button class="opt"><span class="opt__key">4</span>SELECT FLOOR(17.5) → ?</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> FLOOR(17.5) = 17(내림). 나머지는 모두 18. 반올림/올림/버림 구분이 포인트입니다.</div>
+  </div>
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">❓ 확인 퀴즈 · LIKE</div>
+    <div class="quiz__q">이름이 '수'로 끝나는 사원을 찾는 조건은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>WHERE ENAME LIKE '수%'</button>
+      <button class="opt"><span class="opt__key">2</span>WHERE ENAME LIKE '%수'</button>
+      <button class="opt"><span class="opt__key">3</span>WHERE ENAME = '%수'</button>
+      <button class="opt"><span class="opt__key">4</span>WHERE ENAME LIKE '_수'</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> <code>%수</code> = 앞에 아무 글자나 오고 '수'로 끝남. <code>수%</code>는 '수'로 시작, <code>_수</code>는 정확히 2글자(앞 1글자+수).</div>
+  </div>
+
+  <div class="card--cream card" style="margin-top:28px;"><div class="eyebrow" style="margin-bottom:8px;">⏱️ 2과목 2-1 한눈에</div><p style="margin:0;font-size:15.5px;">SELECT–FROM–WHERE–ORDER BY. 조건: <strong>BETWEEN(양끝 포함)·IN·LIKE(%,_)·IS NULL</strong>. 문자 SUBSTR(1부터)·숫자 ROUND/TRUNC·<strong>NVL/NVL2/COALESCE</strong>. 암시적 형변환은 인덱스 못 써 비권장. <code>DISTINCT A,B = GROUP BY A,B</code>.</p></div>
+</div></section>
+</section>
+
+<!-- ================= CH 3-2 ================= -->
+<section class="panel" id="ch32">
+<section class="tile tile--parchment"><div class="wrap">
+<div class="phead">
+    <div class="eyebrow">2과목 · 2-2 SQL 활용</div>
+    <h1 class="display-lg">SQL 활용</h1>
+    <p class="sub">서브쿼리·뷰·집합 연산자·그룹 함수를 다룹니다. 계산 결과를 눈으로 보며 익히면 어렵지 않습니다. (조인·윈도우·계층형은 다음 '빈출 보충'에서 집중 정리)</p>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">1. 서브쿼리 (Subquery)</h3>
+  <p class="lead">쿼리 안에 들어간 또 다른 쿼리. 바깥을 <strong>메인쿼리</strong>, 괄호 안을 <strong>서브쿼리</strong>라 합니다.</p>
+  <div class="eli5"><span class="eli5__label">💡 쉽게 말하면</span><p>아기를 품은 엄마를 떠올리세요. 엄마(메인쿼리) 안에 아기(서브쿼리)가 있죠. 서브쿼리가 먼저 답을 구해 메인쿼리에 건네줍니다. 예) "평균 급여보다 많이 받는 사원" → 먼저 평균을 구하고(서브) 그보다 큰 사람을 고름(메인).</p></div>
+  <div class="codeblock"><span class="cm">-- 평균 급여보다 많이 받는 사원</span>
+<span class="kw">SELECT</span> ENAME, SAL <span class="kw">FROM</span> EMP
+<span class="kw">WHERE</span> SAL &gt; (<span class="kw">SELECT</span> <span class="kw">AVG</span>(SAL) <span class="kw">FROM</span> EMP);  <span class="cm">-- 서브쿼리가 평균(3250)을 반환</span></div>
+  <h4 class="sub3">① 위치에 따른 분류</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>이름</th><th>위치</th><th>설명</th></tr></thead>
+    <tbody>
+      <tr><td><strong>스칼라 서브쿼리</strong></td><td>SELECT 절</td><td>반드시 <strong>값 1개</strong>만 반환(컬럼 자리에)</td></tr>
+      <tr><td><strong>인라인 뷰</strong></td><td>FROM 절</td><td>쿼리 결과를 <strong>임시 테이블</strong>처럼 사용</td></tr>
+      <tr><td><strong>중첩 서브쿼리</strong></td><td>WHERE / HAVING 절</td><td>조건 비교에 사용</td></tr>
+    </tbody>
+  </table></div>
+  <h4 class="sub3">② 반환 형태에 따른 분류</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>종류</th><th>반환</th><th>함께 쓰는 연산자</th></tr></thead>
+    <tbody>
+      <tr><td>단일 행</td><td>1건 이하</td><td><code>= &gt; &lt; &gt;= &lt;=</code></td></tr>
+      <tr><td>다중 행</td><td>2건 이상</td><td><code>IN · ANY · ALL · EXISTS</code> (<code>=</code> 불가!)</td></tr>
+      <tr><td>다중 컬럼</td><td>여러 컬럼</td><td><code>IN</code> 등 (컬럼 묶음 비교)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="eli5"><span class="eli5__label">🔎 연관(상관) vs 비연관 서브쿼리</span><p><strong>연관 서브쿼리:</strong> 서브쿼리가 <strong>메인쿼리의 컬럼을 참조</strong>(행마다 다시 실행). 주로 <code>EXISTS</code>와 함께. <strong>비연관:</strong> 혼자 실행돼 값만 넘김. <code>EXISTS</code>는 "있기만 하면 참"이라 건수를 세지 않아 빠릅니다.</p></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;① 다중 행 서브쿼리에 <code>=</code>를 쓰면 <strong>에러</strong> → <code>IN</code> 사용. ② <code>ANY</code>=하나라도 만족, <code>ALL</code>=모두 만족. ③ 스칼라 서브쿼리는 값이 <strong>딱 1개</strong>여야 함(2개 이상이면 에러). ④ 인라인 뷰 = FROM 절 서브쿼리.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">2. 뷰 (View)</h3>
+  <p class="lead">SELECT 문에 이름을 붙여 재사용하는 <strong>가상 테이블</strong>. 실제 데이터는 저장하지 않고 '정의'만 저장합니다.</p>
+  <div class="codeblock"><span class="kw">CREATE VIEW</span> V_영업사원 <span class="kw">AS</span>
+  <span class="kw">SELECT</span> ENAME, SAL <span class="kw">FROM</span> EMP <span class="kw">WHERE</span> DEPT = <span class="st">'영업'</span>;
+<span class="cm">-- 이후엔 테이블처럼 사용</span>
+<span class="kw">SELECT</span> * <span class="kw">FROM</span> V_영업사원;</div>
+  <div class="three-col">
+    <div class="fcard fcard--lavender"><h3>독립성</h3><p>테이블 구조가 바뀌어도 뷰만 고치면 됨.</p></div>
+    <div class="fcard fcard--peach"><h3>편리성</h3><p>복잡한 쿼리를 뷰 이름 하나로 단순화.</p></div>
+    <div class="fcard fcard--ochre"><h3>보안성</h3><p>민감 컬럼은 빼고 만들어 정보를 감춤.</p></div>
+  </div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>함정</b> &nbsp;뷰의 장점은 독립성·편리성·보안성. <strong>'투명성'은 아님</strong>. 뷰는 <strong>자체 데이터·인덱스를 갖지 않고</strong>, 삽입·수정·삭제에 제약이 많습니다(집계·DISTINCT 포함 뷰 등은 수정 불가).</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">3. 집합 연산자</h3>
+  <p>여러 SELECT 결과를 세로로 합치거나 빼는 연산입니다. <strong>컬럼 개수·데이터 타입이 같아야</strong> 합니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>연산자</th><th>의미</th><th>중복</th></tr></thead>
+    <tbody>
+      <tr><td><code>UNION ALL</code></td><td>합집합 (그대로 이어붙임)</td><td>중복 <strong>유지</strong> (정렬 안 함 → 빠름)</td></tr>
+      <tr><td><code>UNION</code></td><td>합집합</td><td>중복 <strong>제거</strong> (+ 정렬 부하)</td></tr>
+      <tr><td><code>INTERSECT</code></td><td>교집합 (공통)</td><td>중복 제거</td></tr>
+      <tr><td><code>MINUS</code> / <code>EXCEPT</code></td><td>차집합 (앞 − 뒤)</td><td>중복 제거</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="tip__dot">★</span><p><b>핵심</b> &nbsp;① 결과의 <strong>컬럼명(헤더)은 첫 번째 쿼리</strong>를 따름. ② <strong>ORDER BY는 맨 마지막에 한 번만</strong>. ③ <code>MINUS</code>=Oracle, <code>EXCEPT</code>=SQL Server(같은 차집합). ④ 중복 제거가 필요 없으면 <code>UNION ALL</code>이 빠름.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">4. 그룹 함수 — ROLLUP · CUBE · GROUPING SETS</h3>
+  <p>소계(소그룹별 합)와 총계를 한 번에 구하는 함수입니다. 2과목에서 제일 까다롭지만, <strong>"무엇으로 그룹핑되는가"</strong>만 비교하면 됩니다.</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>함수</th><th>그룹핑 결과 (부서 A, 직급 B 기준)</th></tr></thead>
+    <tbody>
+      <tr><td><code>GROUP BY A, B</code></td><td>①(A,B)별 &nbsp;<span style="color:var(--muted)">— 소계·총계 없음</span></td></tr>
+      <tr><td><code>ROLLUP(A, B)</code></td><td>①(A,B)별 ②A별 ③<strong>총계</strong> &nbsp;<span style="color:var(--muted)">(한 방향 소계)</span></td></tr>
+      <tr><td><code>CUBE(A, B)</code></td><td>①(A,B)별 ②A별 ③B별 ④<strong>총계</strong> &nbsp;<span style="color:var(--muted)">(모든 조합)</span></td></tr>
+      <tr><td><code>GROUPING SETS(A, B)</code></td><td>①A별 ②B별 &nbsp;<span style="color:var(--muted)">(지정한 것만, 총계 없음)</span></td></tr>
+    </tbody>
+  </table></div>
+  <div class="eli5"><span class="eli5__label">💡 핵심 직관</span><p><strong>ROLLUP</strong> = 계단식 소계(왼→오 한 방향). <strong>CUBE</strong> = 가능한 <strong>모든 조합</strong>의 소계(다차원, 집계 건수 최다). <strong>GROUPING SETS</strong> = 내가 <strong>지정한 묶음만</strong> 개별 집계. 괄호로 묶은 <code>(A,B)</code>는 '한 덩어리'로 취급됩니다.</p></div>
+  <p class="note">예) 부서·직급별 급여합을 ROLLUP으로 구하면 👇 (소계 행이 자동으로 추가됨)</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>부서</th><th>직급</th><th>급여합</th></tr></thead>
+    <tbody>
+      <tr><td>영업</td><td>사원</td><td>3000</td></tr>
+      <tr><td>영업</td><td>대리</td><td>4000</td></tr>
+      <tr><td>영업</td><td>(소계)</td><td><strong>7000</strong></td></tr>
+      <tr><td>(전체)</td><td>(총계)</td><td><strong>7000</strong></td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;"결합 가능한 <strong>모든</strong> 집계" = <strong>CUBE</strong>. <code>ROLLUP((A,B), C)</code> → (A,B,C)별 → (A,B)별 → 총계. 소계 행의 NULL 자리는 <code>GROUPING()</code> 함수(1이면 소계)로 구분합니다.</p></div>
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 집합 연산자</div>
+    <div class="quiz__q">차집합과 같은 역할을 하는 집합 연산자는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>UNION</button>
+      <button class="opt"><span class="opt__key">2</span>MINUS (= EXCEPT)</button>
+      <button class="opt"><span class="opt__key">3</span>INTERSECT</button>
+      <button class="opt"><span class="opt__key">4</span>UNION ALL</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> 차집합 = MINUS(Oracle) / EXCEPT(SQL Server). 교집합은 INTERSECT, 합집합은 UNION.</div>
+  </div>
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 그룹 함수</div>
+    <div class="quiz__q">A, B 두 컬럼의 <u>모든 조합</u>(A·B·AB·총계)을 집계하는 함수는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>ROLLUP(A, B)</button>
+      <button class="opt"><span class="opt__key">2</span>GROUPING SETS(A, B)</button>
+      <button class="opt"><span class="opt__key">3</span>CUBE(A, B)</button>
+      <button class="opt"><span class="opt__key">4</span>GROUP BY A, B</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> 모든 조합(다차원) 집계는 CUBE. ROLLUP은 한 방향 소계, GROUPING SETS는 지정한 것만.</div>
+  </div>
+
+  <div class="card--cream card" style="margin-top:28px;"><div class="eyebrow" style="margin-bottom:8px;">⏱️ 2과목 2-2 한눈에</div><p style="margin:0;font-size:15.5px;">서브쿼리 위치 = 스칼라(SELECT)·인라인뷰(FROM)·중첩(WHERE). 다중행엔 <strong>IN/ANY/ALL/EXISTS</strong>(=불가). 뷰=가상 테이블(독립·편리·보안). 집합: UNION(중복제거)·UNION ALL(유지)·INTERSECT·MINUS. 그룹: ROLLUP(한방향)·<strong>CUBE(모든조합)</strong>·GROUPING SETS(지정).</p></div>
+</div></section>
+</section>
+
+<!-- ================= CH 3-3 ================= -->
+<section class="panel" id="ch33">
+<section class="tile tile--parchment"><div class="wrap">
+<div class="phead">
+    <div class="eyebrow">2과목 · 2-3 관리 구문</div>
+    <h1 class="display-lg">관리 구문</h1>
+    <p class="sub">SQL 명령어를 4종류로 나눠 익힙니다. <strong>DML·TCL·DDL·DCL</strong> — 어느 명령어가 어디 속하는지가 단골 출제입니다. 제약조건·CREATE 실전도 함께 봅니다.</p>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">0. 명령어 4대 분류 — 먼저 이 표부터</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>분류</th><th>풀이</th><th>명령어</th><th>COMMIT</th></tr></thead>
+    <tbody>
+      <tr><td><strong>DML</strong></td><td>데이터 조작어</td><td>SELECT, INSERT, UPDATE, DELETE, MERGE</td><td>필요(수동)</td></tr>
+      <tr><td><strong>TCL</strong></td><td>트랜잭션 제어어</td><td>COMMIT, ROLLBACK, SAVEPOINT</td><td>—</td></tr>
+      <tr><td><strong>DDL</strong></td><td>데이터 정의어</td><td>CREATE, ALTER, DROP, RENAME, TRUNCATE</td><td><strong>자동(Auto)</strong></td></tr>
+      <tr><td><strong>DCL</strong></td><td>데이터 제어어</td><td>GRANT, REVOKE</td><td>자동</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="tip__dot">★</span><p><b>암기팁</b> &nbsp;헷갈리는 둘: <strong>COMMIT/ROLLBACK은 TCL</strong>(DDL 아님!), <strong>TRUNCATE는 DDL</strong>(DML 아님!). DDL·DCL은 실행 즉시 <strong>자동 COMMIT</strong>이라 ROLLBACK이 안 됩니다.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">1. DML — 데이터 조작어</h3>
+  <div class="codeblock"><span class="cm">-- 입력</span>
+<span class="kw">INSERT INTO</span> EMP (EMPNO, ENAME, SAL) <span class="kw">VALUES</span> (5, <span class="st">'한지민'</span>, 2800);
+<span class="cm">-- 수정 (WHERE 없으면 전체 행!)</span>
+<span class="kw">UPDATE</span> EMP <span class="kw">SET</span> SAL = SAL * 1.1 <span class="kw">WHERE</span> DEPT = <span class="st">'영업'</span>;
+<span class="cm">-- 삭제 (WHERE 없으면 전체 행!)</span>
+<span class="kw">DELETE</span> <span class="kw">FROM</span> EMP <span class="kw">WHERE</span> EMPNO = 5;</div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>명령어</th><th>설명</th><th>주의</th></tr></thead>
+    <tbody>
+      <tr><td><code>INSERT</code></td><td>행 입력</td><td>PK·NOT NULL 컬럼엔 NULL 불가</td></tr>
+      <tr><td><code>UPDATE</code></td><td>행 수정</td><td><strong>WHERE 없으면 전체</strong> 수정</td></tr>
+      <tr><td><code>DELETE</code></td><td>행 삭제</td><td>WHERE 없으면 전체 삭제, COMMIT 전 ROLLBACK 가능</td></tr>
+      <tr><td><code>MERGE</code></td><td>입력+수정 한 번에</td><td>ON 조건으로 MATCHED/NOT MATCHED 분기(동기화)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="eli5"><span class="eli5__label">🔎 DELETE vs TRUNCATE vs DROP — 자주 나옴</span><p><strong>DELETE</strong>: 행만 삭제, <strong>ROLLBACK 가능</strong>, 로그 남김, 구조 유지. <strong>TRUNCATE</strong>: 전체 행 삭제 + 저장공간 초기화, <strong>ROLLBACK 불가(DDL)</strong>, 매우 빠름, 구조 유지. <strong>DROP</strong>: 테이블 <strong>구조까지</strong> 통째 삭제. "미련 남기는 DELETE, 깔끔히 비우는 TRUNCATE, 집까지 허무는 DROP"으로 기억!</p></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;1억 건을 빠르게 비우고 테이블은 유지 → <strong>TRUNCATE</strong>. 일부만 지우고 되돌릴 수 있어야 함 → <strong>DELETE</strong>. Oracle은 DML 후 <strong>COMMIT</strong>해야 반영(SQL Server는 기본 AUTO COMMIT).</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">2. TCL — 트랜잭션 제어어</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>명령어</th><th>설명</th></tr></thead>
+    <tbody>
+      <tr><td><code>COMMIT</code></td><td>변경 내용을 <strong>확정·반영</strong>. 해야 최종 저장됨</td></tr>
+      <tr><td><code>ROLLBACK</code></td><td>변경 내용을 <strong>취소</strong>하고 이전 값으로 복구</td></tr>
+      <tr><td><code>SAVEPOINT 이름</code></td><td>중간 지점 저장 → <code>ROLLBACK TO 이름</code>으로 <strong>일부만</strong> 되돌림</td></tr>
+    </tbody>
+  </table></div>
+  <div class="tip"><span class="tip__dot">★</span><p><b>핵심</b> &nbsp;COMMIT 전까지 변경은 메모리에만 있어 <strong>다른 사용자는 못 봄</strong>. 오래 COMMIT/ROLLBACK 안 하면 <strong>LOCK</strong>이 걸려 남이 그 행을 수정하지 못합니다.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">3. DDL — 데이터 정의어 + 제약조건</h3>
+  <h4 class="sub3">데이터 유형 — CHAR vs VARCHAR</h4>
+  <div class="two-col">
+    <div class="fcard fcard--teal"><h3>CHAR (고정 길이)</h3><p>정한 크기를 <strong>항상 다 차지</strong>. 'IU'를 CHAR(10)에 넣으면 10byte(뒤는 공백). 비교 시 공백 무시 → 'IU' = 'IU&nbsp;&nbsp;'.</p></div>
+    <div class="fcard fcard--peach"><h3>VARCHAR (가변 길이)</h3><p>실제 크기만 사용. 'IU'는 2byte. 비교 시 공백도 문자 → 'IU' ≠ 'IU&nbsp;&nbsp;'.</p></div>
+  </div>
+  <h4 class="sub3">CREATE TABLE — 제약조건과 함께</h4>
+  <div class="codeblock"><span class="kw">CREATE TABLE</span> ORDERS (
+  ORD_ID   <span class="kw">NUMBER</span>       <span class="kw">PRIMARY KEY</span>,         <span class="cm">-- 유일 + NOT NULL</span>
+  MEMBER_ID <span class="kw">VARCHAR2</span>(10) <span class="kw">NOT NULL</span>,            <span class="cm">-- 빈 값 금지</span>
+  QTY      <span class="kw">NUMBER</span>       <span class="kw">DEFAULT</span> 1 <span class="kw">CHECK</span> (QTY &gt; 0), <span class="cm">-- 기본값·값 범위</span>
+  <span class="kw">CONSTRAINT</span> FK_MEM <span class="kw">FOREIGN KEY</span> (MEMBER_ID)
+    <span class="kw">REFERENCES</span> MEMBER (MEMBER_ID)                 <span class="cm">-- 참조 무결성</span>
+);</div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>제약조건</th><th>의미</th></tr></thead>
+    <tbody>
+      <tr><td><strong>PRIMARY KEY</strong></td><td>기본키 = 유일성 + NOT NULL (테이블당 1개)</td></tr>
+      <tr><td><strong>FOREIGN KEY</strong></td><td>다른 테이블 PK 참조 → <strong>참조 무결성</strong></td></tr>
+      <tr><td><strong>UNIQUE</strong></td><td>중복 금지 (단, <strong>NULL은 허용</strong>)</td></tr>
+      <tr><td><strong>NOT NULL</strong></td><td>빈 값 금지</td></tr>
+      <tr><td><strong>CHECK</strong></td><td>값의 범위·조건 지정 (예: 나이 ≥ 0)</td></tr>
+      <tr><td><strong>DEFAULT</strong></td><td>값 생략 시 들어갈 기본값</td></tr>
+    </tbody>
+  </table></div>
+  <h4 class="sub3">주요 DDL 명령어</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>명령어</th><th>설명</th></tr></thead>
+    <tbody>
+      <tr><td><code>ALTER ... ADD</code></td><td>컬럼/제약조건 추가 (컬럼은 항상 맨 끝에)</td></tr>
+      <tr><td><code>ALTER ... MODIFY</code></td><td>데이터유형·DEFAULT·NOT NULL 변경</td></tr>
+      <tr><td><code>ALTER ... DROP COLUMN</code></td><td>컬럼 삭제(복구 불가)</td></tr>
+      <tr><td><code>ALTER ... RENAME COLUMN</code></td><td>컬럼명 변경</td></tr>
+      <tr><td><code>DROP TABLE</code></td><td>테이블 삭제(참조 있으면 <code>CASCADE CONSTRAINT</code>)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="eli5"><span class="eli5__label">🔎 CTAS (테이블 복사 생성)</span><p><code>CREATE TABLE 새테이블 AS SELECT * FROM 원본</code> → 구조+데이터 복사. 단 <strong>NOT NULL만 복사</strong>되고 PK·UNIQUE·CHECK·FK는 복사되지 않으니 필요하면 ALTER로 다시 추가합니다.</p></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;컬럼 유형·DEFAULT·NOT NULL 변경 → <strong>MODIFY</strong>. 컬럼 추가 → <strong>ADD</strong>. UNIQUE는 NULL 허용(PK는 불가). CASCADE는 Oracle에 있고 SQL Server엔 없음.</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">4. DCL — 데이터 제어어 (권한)</h3>
+  <div class="eli5"><span class="eli5__label">💡 쉽게 말하면</span><p>DB를 '집'이라 하면 USER는 '룸메이트'. 사람을 들이고(CREATE USER + 비밀번호), 집을 쓸 <strong>권한</strong>을 줘야(GRANT) 방에 들어갈 수 있어요. 권한 회수는 REVOKE.</p></div>
+  <div class="codeblock"><span class="kw">GRANT</span> <span class="kw">SELECT</span>, <span class="kw">INSERT</span> <span class="kw">ON</span> EMP <span class="kw">TO</span> PERPEAR;   <span class="cm">-- 권한 부여</span>
+<span class="kw">REVOKE</span> <span class="kw">INSERT</span> <span class="kw">ON</span> EMP <span class="kw">FROM</span> PERPEAR;           <span class="cm">-- 권한 회수</span></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>명령어</th><th>설명</th></tr></thead>
+    <tbody>
+      <tr><td><code>GRANT 권한 ON 객체 TO 사용자</code></td><td>권한 부여</td></tr>
+      <tr><td><code>REVOKE 권한 ON 객체 FROM 사용자</code></td><td>권한 회수</td></tr>
+      <tr><td><code>ROLE</code></td><td>여러 권한을 하나로 묶은 <strong>세트</strong>(빅맥세트처럼). ROLE을 사용자에게 GRANT</td></tr>
+    </tbody>
+  </table></div>
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 명령어 분류</div>
+    <div class="quiz__q">다음 중 DDL이 <u>아닌</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>CREATE TABLE</button>
+      <button class="opt"><span class="opt__key">2</span>COMMIT</button>
+      <button class="opt"><span class="opt__key">3</span>ALTER</button>
+      <button class="opt"><span class="opt__key">4</span>TRUNCATE</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> COMMIT은 TCL입니다. DDL = CREATE·ALTER·DROP·RENAME·TRUNCATE.</div>
+  </div>
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">❓ 확인 퀴즈 · TRUNCATE</div>
+    <div class="quiz__q">TRUNCATE에 대한 설명으로 올바른 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>전체 행을 지우지만 테이블 구조는 남고, ROLLBACK은 불가하다.</button>
+      <button class="opt"><span class="opt__key">2</span>WHERE 조건으로 일부 행만 지울 수 있다.</button>
+      <button class="opt"><span class="opt__key">3</span>DML이라 COMMIT 전 ROLLBACK이 가능하다.</button>
+      <button class="opt"><span class="opt__key">4</span>테이블 구조까지 함께 삭제한다.</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ①</b> TRUNCATE는 DDL — 전체 행+공간 초기화, 구조 유지, 자동 COMMIT이라 ROLLBACK 불가. 구조까지 지우는 건 DROP.</div>
+  </div>
+
+  <div class="card--cream card" style="margin-top:28px;"><div class="eyebrow" style="margin-bottom:8px;">⏱️ 2과목 2-3 한눈에</div><p style="margin:0;font-size:15.5px;"><strong>DML</strong>(I·U·D·MERGE, 수동 COMMIT) · <strong>TCL</strong>(COMMIT·ROLLBACK·SAVEPOINT) · <strong>DDL</strong>(CREATE·ALTER·DROP·RENAME·<strong>TRUNCATE</strong>, 자동COMMIT) · <strong>DCL</strong>(GRANT·REVOKE). 제약 6종: PK·FK·UNIQUE(NULL허용)·NOT NULL·CHECK·DEFAULT. ALTER: 추가=ADD, 유형변경=MODIFY.</p></div>
+</div></section>
+</section>
+
+<!-- ================= CH 3-4 보충 ================= -->
+<section class="panel" id="ch34">
+<section class="tile tile--parchment"><div class="wrap">
+<div class="phead">
+    <div class="eyebrow">2과목 · 빈출 보충</div>
+    <h1 class="display-lg">꼭 나오는 SQL 보충</h1>
+    <p class="sub">기출에 <strong>반드시</strong> 나오는 조인·계층형 쿼리·윈도우 함수·실행 순서·CASE를 실제 결과표와 함께 정리했습니다. 2과목 고득점의 열쇠입니다.</p>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">1. JOIN (조인) <span class="pill pill--pink" style="font-size:12px;vertical-align:middle;">최빈출</span></h3>
+  <p class="lead">두 테이블을 공통 컬럼으로 연결해 한 번에 조회합니다. "결과가 몇 건인가"를 묻는 문제가 단골입니다.</p>
+  <p class="note">아래 두 테이블로 설명합니다. (사원 → 부서를 DEPT_ID로 연결)</p>
+  <div class="two-col">
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">EMP (사원)</div><div class="tablewrap" style="margin:0;"><table><thead><tr><th>이름</th><th>DEPT_ID</th></tr></thead><tbody><tr><td>김철수</td><td>10</td></tr><tr><td>이영희</td><td>20</td></tr><tr><td>박민수</td><td>(NULL)</td></tr></tbody></table></div></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">DEPT (부서)</div><div class="tablewrap" style="margin:0;"><table><thead><tr><th>DEPT_ID</th><th>부서명</th></tr></thead><tbody><tr><td>10</td><td>영업</td></tr><tr><td>20</td><td>인사</td></tr><tr><td>30</td><td>개발</td></tr></tbody></table></div></div>
+  </div>
+  <h4 class="sub3">조인 종류와 결과</h4>
+  <div class="tablewrap"><table>
+    <thead><tr><th>종류</th><th>설명</th><th>위 예시 결과 건수</th></tr></thead>
+    <tbody>
+      <tr><td><strong>INNER JOIN</strong></td><td>양쪽에 <strong>모두 있는</strong> 행만(교집합)</td><td>2건 (김철수·이영희)</td></tr>
+      <tr><td><strong>LEFT OUTER</strong></td><td>왼쪽(EMP) 전부 + 매칭(없으면 NULL)</td><td>3건 (박민수 부서=NULL)</td></tr>
+      <tr><td><strong>RIGHT OUTER</strong></td><td>오른쪽(DEPT) 전부 + 매칭</td><td>3건 (개발 사원=NULL)</td></tr>
+      <tr><td><strong>FULL OUTER</strong></td><td>양쪽 전부(매칭+비매칭)</td><td>4건 (박민수 + 개발)</td></tr>
+      <tr><td><strong>CROSS JOIN</strong></td><td>두 테이블 행의 <strong>곱</strong>(카테시안)</td><td>3 × 3 = 9건</td></tr>
+    </tbody>
+  </table></div>
+  <div class="diagram">
+    <p class="dcap">조인별 결과 영역 — 파란 부분이 조회되는 집합</p>
+    <div class="venns">
+      <div class="venn"><svg viewBox="0 0 120 70"><defs><clipPath id="jIN"><circle cx="48" cy="35" r="26"/></clipPath></defs><g clip-path="url(#jIN)"><circle class="vf" cx="72" cy="35" r="26"/></g><circle class="vc" cx="48" cy="35" r="26"/><circle class="vc" cx="72" cy="35" r="26"/></svg><b>INNER</b></div>
+      <div class="venn"><svg viewBox="0 0 120 70"><circle class="vf" cx="48" cy="35" r="26"/><circle class="vc" cx="48" cy="35" r="26"/><circle class="vc" cx="72" cy="35" r="26"/></svg><b>LEFT</b></div>
+      <div class="venn"><svg viewBox="0 0 120 70"><circle class="vf" cx="72" cy="35" r="26"/><circle class="vc" cx="48" cy="35" r="26"/><circle class="vc" cx="72" cy="35" r="26"/></svg><b>RIGHT</b></div>
+      <div class="venn"><svg viewBox="0 0 120 70"><circle class="vf" cx="48" cy="35" r="26"/><circle class="vf" cx="72" cy="35" r="26"/><circle class="vc" cx="48" cy="35" r="26"/><circle class="vc" cx="72" cy="35" r="26"/></svg><b>FULL</b></div>
+    </div>
+  </div>
+  <div class="codeblock"><span class="cm">-- 표준(ANSI) 조인: 사원과 부서명을 함께</span>
+<span class="kw">SELECT</span> E.이름, D.부서명
+<span class="kw">FROM</span> EMP E <span class="kw">LEFT JOIN</span> DEPT D <span class="kw">ON</span> E.DEPT_ID = D.DEPT_ID;</div>
+  <p class="note">↓ LEFT JOIN 결과</p>
+  <div class="tablewrap"><table><thead><tr><th>이름</th><th>부서명</th></tr></thead><tbody><tr><td>김철수</td><td>영업</td></tr><tr><td>이영희</td><td>인사</td></tr><tr><td>박민수</td><td>(NULL)</td></tr></tbody></table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;① <strong>INNER JOIN에서 ON이 빠지면 CROSS JOIN</strong>(행의 곱). ② Oracle의 <code>(+)</code>는 ANSI OUTER로 변환되는데 <strong>(+)가 왼쪽이면 RIGHT</strong> OUTER, 오른쪽이면 LEFT OUTER(기호 반대쪽을 다 살림). ③ NATURAL JOIN·USING의 공통 컬럼엔 <strong>테이블명·별칭을 붙이지 않음</strong>.</p></div>
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 조인 건수</div>
+    <div class="quiz__q">A테이블 4행, B테이블 3행을 CROSS JOIN하면 결과는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>3건</button>
+      <button class="opt"><span class="opt__key">2</span>4건</button>
+      <button class="opt"><span class="opt__key">3</span>7건</button>
+      <button class="opt"><span class="opt__key">4</span>12건</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> CROSS JOIN은 카테시안 곱 → 4 × 3 = 12건. ON 조건이 없는 INNER JOIN도 같은 결과가 됩니다.</div>
+  </div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">2. 조인 보충 — SELF · NATURAL · USING · ON</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>조인</th><th>설명</th></tr></thead>
+    <tbody>
+      <tr><td><strong>SELF JOIN</strong></td><td>한 테이블을 <strong>자기 자신과</strong> 조인(별칭 2개). 사원-상사 관계 등</td></tr>
+      <tr><td><strong>NATURAL JOIN</strong></td><td><strong>같은 이름·타입 컬럼</strong>을 자동 EQUI JOIN. 공통 컬럼에 별칭 금지</td></tr>
+      <tr><td><strong>USING (컬럼)</strong></td><td>공통 컬럼 중 <strong>원하는 것만</strong> 골라 조인. 별칭 금지</td></tr>
+      <tr><td><strong>ON 조건</strong></td><td>조인 조건을 직접 지정(컬럼명 달라도 OK). 가장 유연</td></tr>
+    </tbody>
+  </table></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">3. 계층형 쿼리 (Hierarchical Query)</h3>
+  <p class="lead">부모-자식처럼 <strong>계층 구조</strong>(조직도, 카테고리, 사원-상사)를 펼쳐 조회합니다. Oracle의 <code>CONNECT BY</code>를 씁니다.</p>
+  <div class="codeblock"><span class="kw">SELECT</span> <span class="kw">LEVEL</span>, 이름
+<span class="kw">FROM</span> EMP
+<span class="kw">START WITH</span> 상사ID <span class="kw">IS NULL</span>        <span class="cm">-- ① 최상위(사장)에서 시작</span>
+<span class="kw">CONNECT BY</span> <span class="kw">PRIOR</span> 사원ID = 상사ID; <span class="cm">-- ② 부모의 사원ID = 자식의 상사ID (순방향)</span></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>키워드</th><th>의미</th></tr></thead>
+    <tbody>
+      <tr><td><code>START WITH</code></td><td>계층의 <strong>시작(루트)</strong> 조건</td></tr>
+      <tr><td><code>CONNECT BY</code></td><td>부모-자식 <strong>연결 규칙</strong></td></tr>
+      <tr><td><code>PRIOR</code></td><td>'부모' 행을 가리킴. 위치로 <strong>순방향/역방향</strong> 결정</td></tr>
+      <tr><td><code>LEVEL</code></td><td>계층 <strong>깊이</strong>(루트=1)</td></tr>
+      <tr><td><code>CONNECT_BY_ROOT</code></td><td>각 행의 <strong>최상위 루트</strong> 값</td></tr>
+      <tr><td><code>SYS_CONNECT_BY_PATH</code></td><td>루트부터의 <strong>경로</strong> 문자열(사장/팀장/사원)</td></tr>
+      <tr><td><code>CONNECT_BY_ISLEAF</code></td><td>잎(자식 없는 말단)이면 1</td></tr>
+    </tbody>
+  </table></div>
+  <div class="diagram tree">
+    <p class="dcap">계층 전개 — START WITH 루트에서 CONNECT BY로 아래로 (LEVEL=깊이)</p>
+    <svg viewBox="0 0 480 212" role="img" aria-label="조직 계층 트리">
+      <path class="tl" d="M240 52 V72 H125 V90 M240 52 V72 H355 V90"/>
+      <path class="tl" d="M125 130 V150 H75 V170 M125 130 V150 H190 V170"/>
+      <path class="tl" d="M355 130 V170"/>
+      <rect class="tb tb--on" x="185" y="12" width="110" height="40" rx="9"/>
+      <text class="tt" x="240" y="31" text-anchor="middle" style="fill:#fff">사장</text>
+      <text x="240" y="44" text-anchor="middle" style="fill:#c9c9cf;font-size:10.5px">LEVEL 1</text>
+      <rect class="tb" x="70" y="90" width="110" height="40" rx="9"/><text class="tt" x="125" y="109" text-anchor="middle">팀장</text><text class="ts" x="125" y="122" text-anchor="middle">LEVEL 2</text>
+      <rect class="tb" x="300" y="90" width="110" height="40" rx="9"/><text class="tt" x="355" y="109" text-anchor="middle">팀장</text><text class="ts" x="355" y="122" text-anchor="middle">LEVEL 2</text>
+      <rect class="tb" x="20" y="170" width="110" height="34" rx="9"/><text class="tt" x="75" y="191" text-anchor="middle">사원 · L3</text>
+      <rect class="tb" x="135" y="170" width="110" height="34" rx="9"/><text class="tt" x="190" y="191" text-anchor="middle">사원 · L3</text>
+      <rect class="tb" x="300" y="170" width="110" height="34" rx="9"/><text class="tt" x="355" y="191" text-anchor="middle">사원 · L3</text>
+    </svg>
+  </div>
+  <div class="eli5"><span class="eli5__label">🔎 순방향 vs 역방향</span><p><code>PRIOR 사원ID = 상사ID</code> → 위에서 아래로(사장→사원) <strong>순방향 전개</strong>. 좌우를 바꾼 <code>PRIOR 상사ID = 사원ID</code> → 아래에서 위로(사원→사장) <strong>역방향 전개</strong>. PRIOR가 붙은 쪽이 '부모'라고 기억하세요.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">4. 윈도우 함수 (Window Function) <span class="pill pill--pink" style="font-size:12px;vertical-align:middle;">빈출</span></h3>
+  <p class="lead">GROUP BY처럼 묶지만 <strong>행을 줄이지 않고</strong>, 각 행 옆에 순위·누적합·이전값 같은 계산을 붙입니다. 핵심은 <code>OVER (PARTITION BY ... ORDER BY ...)</code>.</p>
+  <div class="codeblock"><span class="kw">SELECT</span> 이름, 부서, 급여,
+  <span class="kw">RANK</span>() <span class="kw">OVER</span> (<span class="kw">PARTITION BY</span> 부서 <span class="kw">ORDER BY</span> 급여 <span class="kw">DESC</span>) <span class="kw">AS</span> 부서내순위
+<span class="kw">FROM</span> EMP;</div>
+  <h4 class="sub3">순위 함수 — RANK vs DENSE_RANK vs ROW_NUMBER</h4>
+  <p class="note">같은 급여(공동 1위)가 있을 때 차이가 핵심입니다. 👇 (급여순 정렬)</p>
+  <div class="tablewrap"><table>
+    <thead><tr><th>급여</th><th>RANK</th><th>DENSE_RANK</th><th>ROW_NUMBER</th></tr></thead>
+    <tbody>
+      <tr><td>5000</td><td>1</td><td>1</td><td>1</td></tr>
+      <tr><td>5000</td><td>1</td><td>1</td><td>2</td></tr>
+      <tr><td>4000</td><td><strong>3</strong></td><td><strong>2</strong></td><td>3</td></tr>
+      <tr><td>3000</td><td>4</td><td>3</td><td>4</td></tr>
+    </tbody>
+  </table></div>
+  <div class="eli5"><span class="eli5__label">💡 한 줄 정리</span><p><strong>RANK</strong> = 공동 순위 후 건너뜀(1,1,<u>3</u>). <strong>DENSE_RANK</strong> = 안 건너뜀(1,1,<u>2</u>). <strong>ROW_NUMBER</strong> = 무조건 1,2,3(동점도 구분). 올림픽 메달식이 RANK입니다.</p></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>함수</th><th>기능</th></tr></thead>
+    <tbody>
+      <tr><td><code>SUM() OVER (ORDER BY ...)</code></td><td><strong>누적 합계</strong>(행이 쌓일수록 누적)</td></tr>
+      <tr><td><code>LAG / LEAD</code></td><td>이전 / 다음 행의 값(전월 대비 등)</td></tr>
+      <tr><td><code>FIRST_VALUE / LAST_VALUE</code></td><td>정렬 후 첫 / 마지막 값</td></tr>
+      <tr><td><code>NTILE(n)</code></td><td>n개 등급으로 균등 분할</td></tr>
+      <tr><td><code>RATIO_TO_REPORT</code></td><td>파티션 합계 중 비율(0~1)</td></tr>
+      <tr><td><code>CUME_DIST / PERCENT_RANK</code></td><td>누적 백분율(0~1)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;RANK vs DENSE_RANK(건너뛰기 유무)가 최다 출제. <code>PARTITION BY</code>=그룹 나눔, <code>ORDER BY</code>=그룹 내 정렬. 비율 함수(CUME_DIST·PERCENT_RANK·RATIO_TO_REPORT)는 0~1 범위.</p></div>
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 순위 함수</div>
+    <div class="quiz__q">공동 1위가 둘일 때 다음 순위를 '2'로 매기는(건너뛰지 않는) 함수는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>RANK</button>
+      <button class="opt"><span class="opt__key">2</span>DENSE_RANK</button>
+      <button class="opt"><span class="opt__key">3</span>ROW_NUMBER</button>
+      <button class="opt"><span class="opt__key">4</span>NTILE</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> DENSE_RANK는 1,1,2로 건너뛰지 않음. RANK는 1,1,3으로 건너뜀, ROW_NUMBER는 동점도 1,2,3.</div>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">5. 실행 순서 · 연산자 우선순위</h3>
+  <div class="two-col">
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">SQL 실행 순서</div><p style="margin:0;font-size:15px;"><strong>FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY</strong></p></div>
+    <div class="card"><div class="eyebrow" style="margin-bottom:8px;">연산자 우선순위</div><p style="margin:0;font-size:15px;">산술 → 연결(<code>||</code>) → 비교 → <code>IN·LIKE·BETWEEN·IS NULL</code> → <strong>NOT → AND → OR</strong></p></div>
+  </div>
+  <div class="tip"><span class="tip__dot">★</span><p><b>암기팁</b> &nbsp;실행 순서 = "<strong>프 → 웨 → 그 → 하 → 셀 → 오</strong>". SELECT는 거의 마지막, ORDER BY가 진짜 마지막. <strong>작성 순서와 실행 순서가 다른 것</strong>이 함정(그래서 WHERE에선 SELECT 별칭을 못 씀).</p></div>
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">❓ 확인 퀴즈 · 실행 순서</div>
+    <div class="quiz__q">SQL문의 실행 순서로 올바른 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>FROM → WHERE → GROUP BY → HAVING → SELECT → ORDER BY</button>
+      <button class="opt"><span class="opt__key">2</span>FROM → WHERE → HAVING → GROUP BY → SELECT → ORDER BY</button>
+      <button class="opt"><span class="opt__key">3</span>SELECT → FROM → WHERE → GROUP BY → HAVING → ORDER BY</button>
+      <button class="opt"><span class="opt__key">4</span>FROM → WHERE → GROUP BY → SELECT → HAVING → ORDER BY</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ①</b> FROM(테이블) → WHERE(행 필터) → GROUP BY(묶기) → HAVING(그룹 필터) → SELECT(인출) → ORDER BY(정렬).</div>
+  </div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">6. GROUP BY · HAVING · 집계함수</h3>
+  <p>데이터를 묶어 합계·평균·개수를 구합니다.</p>
+  <div class="codeblock"><span class="kw">SELECT</span> 부서, <span class="kw">COUNT</span>(*) <span class="kw">AS</span> 인원, <span class="kw">AVG</span>(급여) <span class="kw">AS</span> 평균
+<span class="kw">FROM</span> EMP
+<span class="kw">WHERE</span> 급여 &gt; 2000       <span class="cm">-- ① 묶기 전 행 필터</span>
+<span class="kw">GROUP BY</span> 부서           <span class="cm">-- ② 부서별로 묶기</span>
+<span class="kw">HAVING</span> <span class="kw">COUNT</span>(*) &gt;= 2;  <span class="cm">-- ③ 묶은 뒤 그룹 필터</span></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;① <strong>WHERE=그룹 전, HAVING=그룹 후</strong> 필터. ② SELECT에 집계함수와 함께 쓴 <strong>일반 컬럼은 반드시 GROUP BY에</strong> 포함. ③ 집계함수(SUM·AVG·COUNT(컬럼))는 NULL 제외, <strong>COUNT(*)만 NULL 포함</strong>해 전체 행을 셈.</p></div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">7. CASE · DECODE</h3>
+  <div class="codeblock"><span class="kw">SELECT</span> 이름,
+  <span class="kw">CASE</span> <span class="kw">WHEN</span> 급여 &gt;= 4000 <span class="kw">THEN</span> <span class="st">'고급'</span>
+       <span class="kw">WHEN</span> 급여 &gt;= 3000 <span class="kw">THEN</span> <span class="st">'중급'</span>
+       <span class="kw">ELSE</span> <span class="st">'초급'</span> <span class="kw">END</span> <span class="kw">AS</span> 등급
+<span class="kw">FROM</span> EMP;</div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>구문</th><th>설명</th></tr></thead>
+    <tbody>
+      <tr><td><code>CASE WHEN 조건 THEN … ELSE … END</code></td><td>IF-THEN-ELSE 논리. <strong>범위 조건</strong> 가능(≥, BETWEEN 등)</td></tr>
+      <tr><td><code>DECODE(컬럼, A, 결과1, 기본값)</code></td><td>Oracle 전용. <strong>= 비교만</strong> 가능(범위 불가)</td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;① <code>CASE col WHEN NULL THEN…</code>은 NULL을 <strong>못 잡음</strong> → 반드시 <code>WHEN col IS NULL</code>. ② DECODE는 등호(=) 비교만, 범위 비교는 CASE로. ③ CASE는 위에서부터 <strong>먼저 맞는 조건</strong>에서 멈춤.</p></div>
+</div></section>
+
+<section class="tile tile--parchment"><div class="wrap">
+<h3 class="sec display-sm">8. TOP-N 쿼리 (상위 N건)</h3>
+  <div class="tablewrap"><table>
+    <thead><tr><th>방식</th><th>문법</th></tr></thead>
+    <tbody>
+      <tr><td>Oracle <code>ROWNUM</code></td><td><code>WHERE ROWNUM &lt;= 5</code> (정렬 필요 시 <strong>인라인 뷰로 ORDER BY 먼저</strong>)</td></tr>
+      <tr><td>ANSI <code>FETCH</code></td><td><code>ORDER BY 급여 DESC FETCH FIRST 5 ROWS ONLY</code></td></tr>
+      <tr><td><code>OFFSET … FETCH</code></td><td><code>OFFSET 10 ROWS FETCH NEXT 5 ROWS ONLY</code> (11~15위)</td></tr>
+      <tr><td>SQL Server <code>TOP</code> / MySQL <code>LIMIT</code></td><td><code>SELECT TOP 5 …</code> / <code>… LIMIT 5</code></td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>함정 주의</b> &nbsp;<code>WHERE ROWNUM &lt;= 5 ORDER BY ...</code>는 <strong>정렬 전에</strong> 5건을 잘라버려 원하는 상위 5건이 아닐 수 있음. 반드시 <strong>정렬된 인라인 뷰를 먼저</strong> 만든 뒤 ROWNUM을 거세요.</p></div>
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">❓ 확인 퀴즈 · TOP-N</div>
+    <div class="quiz__q">정렬된 상위 5건을 올바르게 조회하는 Oracle 방식은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>SELECT * FROM EMP WHERE ROWNUM &lt;= 5 ORDER BY SAL DESC</button>
+      <button class="opt"><span class="opt__key">2</span>SELECT * FROM (SELECT * FROM EMP ORDER BY SAL DESC) WHERE ROWNUM &lt;= 5</button>
+      <button class="opt"><span class="opt__key">3</span>SELECT TOP 5 * FROM EMP ORDER BY SAL DESC</button>
+      <button class="opt"><span class="opt__key">4</span>SELECT * FROM EMP LIMIT 5</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> ROWNUM은 정렬 전에 매겨지므로 <strong>정렬된 인라인 뷰를 먼저</strong> 만든 뒤 ROWNUM을 걸어야 진짜 상위 5건. (TOP=SQL Server, LIMIT=MySQL)</div>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<h3 class="sec display-sm">9. PIVOT / UNPIVOT · 정규표현식</h3>
+  <div class="two-col">
+    <div class="fcard fcard--lavender"><h3>PIVOT</h3><p><strong>행 → 열</strong>로 회전. 세로로 쌓인 데이터를 가로 교차표로. (월별 매출을 '1월·2월·3월' 컬럼으로)</p></div>
+    <div class="fcard fcard--peach"><h3>UNPIVOT</h3><p><strong>열 → 행</strong>으로 되돌림. 가로로 펼친 컬럼을 세로 데이터로.</p></div>
+  </div>
+  <div class="eli5"><span class="eli5__label">💡 쉽게 말하면</span><p>엑셀 '피벗 테이블'과 같습니다. PIVOT=세로 목록을 가로 요약표로, UNPIVOT=그 반대. 방향만 기억하면 됩니다.</p></div>
+  <div class="tablewrap"><table>
+    <thead><tr><th>정규식 기호/함수</th><th>의미</th></tr></thead>
+    <tbody>
+      <tr><td><code>^</code> / <code>$</code></td><td>문자열의 <strong>시작</strong> / <strong>끝</strong></td></tr>
+      <tr><td><code>.</code> / <code>|</code></td><td>임의의 한 문자 / OR</td></tr>
+      <tr><td><code>[ ]</code> / <code>[^ ]</code></td><td>안의 문자 중 하나 / 제외한 하나</td></tr>
+      <tr><td><code>REGEXP_LIKE</code> / <code>REGEXP_SUBSTR</code></td><td>패턴 일치 여부(조건) / 패턴 부분 추출</td></tr>
+    </tbody>
+  </table></div>
+  <div class="exam"><span class="exam__dot">!</span><p><b>시험 포인트</b> &nbsp;<code>^</code>=시작, <code>$</code>=끝이 단골. <code>[ ]</code>=하나와 일치, <code>[^ ]</code>=제외. 자주는 아니지만 기호 뜻만 알면 풀립니다.</p></div>
+
+  <div class="card--cream card" style="margin-top:28px;"><div class="eyebrow" style="margin-bottom:8px;">⏱️ 빈출 보충 한눈에</div><p style="margin:0;font-size:15.5px;">JOIN: INNER(교집합)·OUTER(한쪽 다)·CROSS(곱), ON 빠지면 CROSS, Oracle (+)는 반대쪽. 계층형=START WITH·CONNECT BY·PRIOR·LEVEL. 윈도우: <strong>RANK(건너뜀)·DENSE_RANK(안건너뜀)·ROW_NUMBER</strong>. 실행순서=프웨그하셀오. CASE는 범위 OK·DECODE는 =만. TOP-N은 <strong>정렬 후 ROWNUM</strong>.</p></div>
+</div></section>
+</section>
+
+<!-- ================= EXAM 1 ================= -->
+<section class="panel" id="exam1">
+<section class="tile tile--parchment"><div class="wrap">
+<div class="phead">
+    <div class="eyebrow">실전 기출 · 1회</div>
+    <h1 class="display-lg">최신 기출문제 1회</h1>
+    <p class="sub">보기를 눌러 바로 채점·해설을 확인하세요. 표·그림이 필요한 계산 문항은 제외하고, 개념으로 풀 수 있는 핵심 문항을 선별했습니다.</p>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<div class="pill pill--teal" style="margin-bottom:8px;">1과목 · 데이터 모델링</div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 01</div>
+    <div class="quiz__q">분산 데이터베이스에 대한 설명으로 올바르지 <u>않은</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>지역 DB에서 쿼리를 실행해 빠르게 응답할 수 있다.</button>
+      <button class="opt"><span class="opt__key">2</span>여러 DB가 존재하므로 관리가 어렵다.</button>
+      <button class="opt"><span class="opt__key">3</span>보안 통제가 쉽고 비용이 절감된다.</button>
+      <button class="opt"><span class="opt__key">4</span>장애 시 다른 DB가 서비스하여 가용성이 좋아진다.</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> 분산 DB는 여러 DB가 있어 중앙 집중 보안 관리가 <strong>어렵고 비용이 증가</strong>합니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 02</div>
+    <div class="quiz__q">데이터 모델링 관점 중 <strong>CRUD 매트릭스</strong>와 관련 있는 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>프로세스 관점</button>
+      <button class="opt"><span class="opt__key">2</span>데이터 관점</button>
+      <button class="opt"><span class="opt__key">3</span>데이터와 데이터 간 상관 관점</button>
+      <button class="opt"><span class="opt__key">4</span>데이터와 프로세스의 상관 관점</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> CRUD 매트릭스는 업무(프로세스)와 데이터의 관계를 나타내는 '데이터와 프로세스 상관 관점'입니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 04</div>
+    <div class="quiz__q">고객 엔터티에 고객ID·이름·주소가 있다. 이때 <strong>주소</strong>는 어떤 속성인가?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>파생 속성</button>
+      <button class="opt"><span class="opt__key">2</span>일반 속성</button>
+      <button class="opt"><span class="opt__key">3</span>설계 속성</button>
+      <button class="opt"><span class="opt__key">4</span>복합 속성</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> 주소는 시·군·동으로 분해 가능 → <strong>복합 속성</strong>.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">문제 05</div>
+    <div class="quiz__q">3층 스키마에 해당되지 <u>않는</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>외부 단계</button>
+      <button class="opt"><span class="opt__key">2</span>사용 단계</button>
+      <button class="opt"><span class="opt__key">3</span>개념 단계</button>
+      <button class="opt"><span class="opt__key">4</span>내부 단계</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> 3층 스키마 = 외부·개념·내부. '사용 단계'는 없습니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 06</div>
+    <div class="quiz__q">반정규화를 적용하는 이유로 올바르지 <u>않은</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>조회 시 디스크 입출력량이 많아 성능이 저하되는 경우</button>
+      <button class="opt"><span class="opt__key">2</span>여러 테이블 조인으로 성능 저하가 예상되는 경우</button>
+      <button class="opt"><span class="opt__key">3</span>합계·평균 계산을 읽을 때 성능 저하가 예상되는 경우</button>
+      <button class="opt"><span class="opt__key">4</span>중복성을 감소시켜 조회 성능을 향상시켜야 하는 경우</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> 반정규화는 중복을 <strong>허용(증가)</strong>해 성능을 올립니다. 중복을 감소시키는 건 정규화.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 08</div>
+    <div class="quiz__q">카디널리티를 계산하는 식으로 올바른 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>2 × 전체 레코드 수</button>
+      <button class="opt"><span class="opt__key">2</span>0.5 × 전체 레코드 수</button>
+      <button class="opt"><span class="opt__key">3</span>선택도 × 전체 레코드 수</button>
+      <button class="opt"><span class="opt__key">4</span>Blevel × 전체 레코드 수</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> 카디널리티 = 선택도 × 전체 레코드 수.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 09</div>
+    <div class="quiz__q">기본키를 제외하고 칼럼 간 종속성이 발생하면 테이블을 분할하는 정규화는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>제1정규화</button>
+      <button class="opt"><span class="opt__key">2</span>제2정규화</button>
+      <button class="opt"><span class="opt__key">3</span>제3정규화</button>
+      <button class="opt"><span class="opt__key">4</span>제4정규화</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> 이행 함수 종속(키 외 칼럼 간 종속) 제거 = 제3정규화.</div>
+  </div>
+
+  <div class="pill pill--teal" style="margin:28px 0 8px;">2과목 · SQL</div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 12</div>
+    <div class="quiz__q">다음 중 DDL 문이 <u>아닌</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>CREATE TABLE</button>
+      <button class="opt"><span class="opt__key">2</span>RENAME</button>
+      <button class="opt"><span class="opt__key">3</span>COMMIT</button>
+      <button class="opt"><span class="opt__key">4</span>ALTER</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> COMMIT·ROLLBACK은 TCL. DDL = CREATE·ALTER·DROP·RENAME·TRUNCATE.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">문제 20</div>
+    <div class="quiz__q">계층형 쿼리문의 내장 함수가 <u>아닌</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>LEVEL</button>
+      <button class="opt"><span class="opt__key">2</span>TRIM</button>
+      <button class="opt"><span class="opt__key">3</span>SYS_CONNECT_BY_PATH</button>
+      <button class="opt"><span class="opt__key">4</span>CONNECT_BY_ROOT</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> TRIM은 문자 함수. 계층형 함수 = LEVEL·SYS_CONNECT_BY_PATH·CONNECT_BY_ROOT·CONNECT_BY_ISLEAF 등.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">문제 26</div>
+    <div class="quiz__q">SQL에 대한 설명으로 올바르지 <u>않은</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>DDL : 테이블 등 데이터 구조를 정의·변경한다.</button>
+      <button class="opt"><span class="opt__key">2</span>DCL : 테이블의 데이터를 변경한다.</button>
+      <button class="opt"><span class="opt__key">3</span>DML : 데이터를 입력·변경·삭제한다.</button>
+      <button class="opt"><span class="opt__key">4</span>TCL : 트랜잭션을 제어하며 COMMIT·ROLLBACK이 있다.</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> 데이터를 변경하는 것은 DML입니다. DCL은 권한 부여/회수(GRANT·REVOKE).</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">문제 33</div>
+    <div class="quiz__q">실행 결과가 <u>다른</u> 하나는? (COL1이 NULL일 때 −1을 반환하는지 확인)</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>SELECT CASE a.COL1 WHEN null THEN -1 ELSE 0 END FROM Mytest a;</button>
+      <button class="opt"><span class="opt__key">2</span>SELECT CASE WHEN a.COL1 IS NULL THEN -1 ELSE 0 END FROM Mytest a;</button>
+      <button class="opt"><span class="opt__key">3</span>SELECT DECODE(a.COL1, null, -1, a.COL1) FROM Mytest a;</button>
+      <button class="opt"><span class="opt__key">4</span>SELECT NVL(a.COL1, -1) FROM Mytest a;</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ①</b> <code>CASE COL WHEN null</code>로는 NULL을 잡을 수 없어 0을 반환합니다. NULL 비교는 <strong>IS NULL</strong>로 해야 합니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 25</div>
+    <div class="quiz__q">DROP TABLE 테이블명 [CASCADE CONSTRAINT]에 대한 설명으로 옳은 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>테이블의 구조만 삭제된다.</button>
+      <button class="opt"><span class="opt__key">2</span>CASCADE는 Oracle·SQL Server·MySQL 모두 지원한다.</button>
+      <button class="opt"><span class="opt__key">3</span>SQL Server는 테이블을 먼저 삭제한 뒤 FK를 삭제한다.</button>
+      <button class="opt"><span class="opt__key">4</span>CASCADE CONSTRAINT는 참조되는 제약조건도 함께 삭제한다.</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> DROP은 구조·데이터 모두 삭제. CASCADE는 Oracle에만 있고, 참조 제약조건까지 삭제합니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 45</div>
+    <div class="quiz__q">유일성과 최소성을 만족하는 키는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>인조키</button>
+      <button class="opt"><span class="opt__key">2</span>슈퍼키</button>
+      <button class="opt"><span class="opt__key">3</span>후보키</button>
+      <button class="opt"><span class="opt__key">4</span>외래키</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> 후보키 = 유일성+최소성. 슈퍼키는 유일성만(최소성 X).</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">문제 50</div>
+    <div class="quiz__q">하나의 값만 반환하며 주로 SELECT 절에 쓰이지만 컬럼이 올 수 있는 모든 곳에 위치하는 서브쿼리는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>SCALAR SUBQUERY</button>
+      <button class="opt"><span class="opt__key">2</span>INLINE VIEW</button>
+      <button class="opt"><span class="opt__key">3</span>NESTED SUBQUERY</button>
+      <button class="opt"><span class="opt__key">4</span>CORRELATED SUBQUERY</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ①</b> 스칼라 서브쿼리는 SELECT 절에서 값 1개를 반환합니다. FROM 절은 인라인 뷰.</div>
+  </div>
+</div></section>
+</section>
+
+<!-- ================= EXAM 2 ================= -->
+<section class="panel" id="exam2">
+<section class="tile tile--parchment"><div class="wrap">
+<div class="phead">
+    <div class="eyebrow">실전 기출 · 2회</div>
+    <h1 class="display-lg">최신 기출문제 2회</h1>
+    <p class="sub">1회를 풀었다면 2회로 마무리하세요. 반복해서 나오는 개념(정규화·식별자·조인·윈도우·NULL)이 곧 출제 포인트입니다.</p>
+  </div>
+</div></section>
+
+<section class="tile tile--light"><div class="wrap">
+<div class="pill pill--teal" style="margin-bottom:8px;">1과목 · 데이터 모델링</div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 02</div>
+    <div class="quiz__q">데이터베이스 식별자에 대한 설명으로 가장 적절하지 <u>않은</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>엔터티 내 인스턴스를 구별하는 구분자이다.</button>
+      <button class="opt"><span class="opt__key">2</span>주식별자로 지정되면 반드시 값이 들어와야 한다.</button>
+      <button class="opt"><span class="opt__key">3</span>IE 표기법에서 비식별 관계는 점선으로 표시된다.</button>
+      <button class="opt"><span class="opt__key">4</span>타 엔터티로부터 받아오는 식별자를 보조식별자라 한다.</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> 타 엔터티로부터 받아오는 식별자는 <strong>외부 식별자</strong>입니다. 보조식별자는 대표성이 없는 식별자.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">문제 03</div>
+    <div class="quiz__q">한 개의 속성에 하나 이상의 속성값이 존재할 때 수행하는 정규화는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>제1정규화</button>
+      <button class="opt"><span class="opt__key">2</span>제2정규화</button>
+      <button class="opt"><span class="opt__key">3</span>제3정규화</button>
+      <button class="opt"><span class="opt__key">4</span>제4정규화</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ①</b> 하나의 속성에 여러 값(반복그룹) → 원자값으로 분리 = 제1정규화.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">문제 04</div>
+    <div class="quiz__q">식별자 확정, 정규화, M:N 관계 해소, 참조 무결성 규칙 정의, 모델링 최종 완료를 수행하는 단계는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>개념적 데이터 모델링</button>
+      <button class="opt"><span class="opt__key">2</span>논리적 데이터 모델링</button>
+      <button class="opt"><span class="opt__key">3</span>물리적 데이터 모델링</button>
+      <button class="opt"><span class="opt__key">4</span>통합적 데이터 모델링</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> 식별자·정규화·관계 해소·최종 완료는 논리적 모델링 단계입니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">문제 06</div>
+    <div class="quiz__q">주식별자로 가장 적절하지 <u>않은</u> 속성은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>부서명</button>
+      <button class="opt"><span class="opt__key">2</span>사번</button>
+      <button class="opt"><span class="opt__key">3</span>주문코드</button>
+      <button class="opt"><span class="opt__key">4</span>환자번호</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ①</b> 이름·명칭류는 주식별자로 부적절. 부서명보다 부서코드가 적절합니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 07</div>
+    <div class="quiz__q">M:N 관계를 해소하기 위해 인위적으로 만든 엔터티로 가장 적절한 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>기본 엔터티</button>
+      <button class="opt"><span class="opt__key">2</span>행위 엔터티</button>
+      <button class="opt"><span class="opt__key">3</span>교차 엔터티</button>
+      <button class="opt"><span class="opt__key">4</span>종속 엔터티</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> M:N을 1:N·N:1로 풀 때 중간에 두는 것이 교차 엔터티입니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 10</div>
+    <div class="quiz__q">제3정규화에 대한 설명으로 가장 적절한 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>복합키의 부분함수 종속성을 제거한다.</button>
+      <button class="opt"><span class="opt__key">2</span>여러 값을 갖는 속성에 대해 테이블을 분할한다.</button>
+      <button class="opt"><span class="opt__key">3</span>JOIN으로 발생하는 종속성을 제거한다.</button>
+      <button class="opt"><span class="opt__key">4</span>이행 함수 종속성을 제거한다.</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> A→B, B→C라 A→C가 성립하는 이행 종속을 제거하는 것이 3정규화. ①=2정규화, ②=1정규화.</div>
+  </div>
+
+  <div class="pill pill--teal" style="margin:28px 0 8px;">2과목 · SQL</div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 12</div>
+    <div class="quiz__q">VIEW의 특징으로 가장 적절하지 <u>않은</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>독립성</button>
+      <button class="opt"><span class="opt__key">2</span>편리성</button>
+      <button class="opt"><span class="opt__key">3</span>보안성</button>
+      <button class="opt"><span class="opt__key">4</span>간결성</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> 뷰의 특징은 독립성·편리성·보안성입니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 19</div>
+    <div class="quiz__q">순수 관계 연산자에 해당하지 <u>않는</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>SELECT</button>
+      <button class="opt"><span class="opt__key">2</span>JOIN</button>
+      <button class="opt"><span class="opt__key">3</span>DIVIDE</button>
+      <button class="opt"><span class="opt__key">4</span>DELETE</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> 순수 관계 연산자 = SELECT·PROJECT·JOIN·DIVIDE. DELETE는 포함 안 됨.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">문제 24</div>
+    <div class="quiz__q">DML·DCL·DDL이 <u>잘못</u> 짝지어진 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>DCL – SELECT</button>
+      <button class="opt"><span class="opt__key">2</span>DDL – RENAME</button>
+      <button class="opt"><span class="opt__key">3</span>DML – UPDATE</button>
+      <button class="opt"><span class="opt__key">4</span>TCL – ROLLBACK</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ①</b> SELECT는 DML. DCL은 GRANT·REVOKE입니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 28</div>
+    <div class="quiz__q">결과가 <u>다른</u> SQL은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>SELECT ROUND(-3.67) → -4</button>
+      <button class="opt"><span class="opt__key">2</span>SELECT TRUNC(-4.67) → -4</button>
+      <button class="opt"><span class="opt__key">3</span>SELECT FLOOR(-3.67) → -4</button>
+      <button class="opt"><span class="opt__key">4</span>SELECT CEIL(-3.67) → ?</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> CEIL(-3.67)=-3(올림). 나머지는 모두 -4.</div>
+  </div>
+
+  <div class="quiz" data-answer="2">
+    <div class="quiz__tag">문제 29</div>
+    <div class="quiz__q">결과가 <u>다른</u> SQL은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>SELECT CONCAT('HELLO','SQL') → HELLOSQL</button>
+      <button class="opt"><span class="opt__key">2</span>SELECT LOWER('HelloSQL') → ?</button>
+      <button class="opt"><span class="opt__key">3</span>SELECT 'HELLO' || 'SQL' → HELLOSQL</button>
+      <button class="opt"><span class="opt__key">4</span>SELECT UPPER('HelloSQL') → HELLOSQL</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ②</b> LOWER는 소문자 'hellosql'. 나머지는 모두 'HELLOSQL'.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 35</div>
+    <div class="quiz__q">집합 연산자에 대한 설명으로 가장 적절하지 <u>않은</u> 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>UNION과 INTERSECT는 중복 행을 하나로 출력한다.</button>
+      <button class="opt"><span class="opt__key">2</span>INTERSECT는 교집합이다.</button>
+      <button class="opt"><span class="opt__key">3</span>MINUS는 앞 결과에서 뒤 결과를 뺀 것이다.</button>
+      <button class="opt"><span class="opt__key">4</span>UNION 시 SQL별로 ORDER BY를 사용할 수 있다.</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> 집합 연산자의 ORDER BY는 <strong>맨 마지막 줄에 한 번만</strong> 씁니다.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 36</div>
+    <div class="quiz__q">SAMPLE1·SAMPLE2에 데이터가 각 8건일 때, ON 절이 누락된 INNER JOIN의 결과 건수는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>8</button>
+      <button class="opt"><span class="opt__key">2</span>16</button>
+      <button class="opt"><span class="opt__key">3</span>64</button>
+      <button class="opt"><span class="opt__key">4</span>알 수 없다</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> ON이 빠지면 CROSS JOIN과 같아 8 × 8 = 64건.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 38</div>
+    <div class="quiz__q">고정 길이 문자열을 가지는 데이터 타입은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>VARCHAR</button>
+      <button class="opt"><span class="opt__key">2</span>STRING</button>
+      <button class="opt"><span class="opt__key">3</span>CHAR</button>
+      <button class="opt"><span class="opt__key">4</span>VARCHAR2</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> CHAR=고정 길이, VARCHAR/VARCHAR2=가변 길이.</div>
+  </div>
+
+  <div class="quiz" data-answer="1">
+    <div class="quiz__tag">문제 41</div>
+    <div class="quiz__q">특정 파티션에서 정렬된 데이터 중 <strong>마지막</strong> 데이터를 구하는 윈도우 함수는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>LAST_VALUE</button>
+      <button class="opt"><span class="opt__key">2</span>FIRST_VALUE</button>
+      <button class="opt"><span class="opt__key">3</span>MAX</button>
+      <button class="opt"><span class="opt__key">4</span>MIN</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ①</b> LAST_VALUE=마지막, FIRST_VALUE=첫 번째 값.</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 43</div>
+    <div class="quiz__q">값의 범위(도메인)를 지정할 수 있는 제약조건은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>PRIMARY KEY</button>
+      <button class="opt"><span class="opt__key">2</span>UNIQUE KEY</button>
+      <button class="opt"><span class="opt__key">3</span>CHECK</button>
+      <button class="opt"><span class="opt__key">4</span>FOREIGN KEY</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> CHECK는 값의 범위를 제한합니다. (예: 성별 IN ('M','F'))</div>
+  </div>
+
+  <div class="quiz" data-answer="3">
+    <div class="quiz__tag">문제 49</div>
+    <div class="quiz__q">다음 중 <strong>버림</strong>을 수행하는 함수는?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>ROUND</button>
+      <button class="opt"><span class="opt__key">2</span>CEIL</button>
+      <button class="opt"><span class="opt__key">3</span>FLOOR</button>
+      <button class="opt"><span class="opt__key">4</span>CONCAT</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ③</b> FLOOR=작거나 같은 최대 정수(내림/버림). CEIL=올림.</div>
+  </div>
+
+  <div class="quiz" data-answer="4">
+    <div class="quiz__tag">문제 50</div>
+    <div class="quiz__q">특정 권한들을 하나의 세트처럼 묶는 것은?</div>
+    <div class="quiz__opts">
+      <button class="opt"><span class="opt__key">1</span>DBA</button>
+      <button class="opt"><span class="opt__key">2</span>GROUP</button>
+      <button class="opt"><span class="opt__key">3</span>USER</button>
+      <button class="opt"><span class="opt__key">4</span>ROLE</button>
+    </div>
+    <div class="quiz__exp"><b>정답 ④</b> ROLE은 여러 권한을 묶은 세트입니다.</div>
+  </div>
+
+  <div class="card--cream card" style="margin-top:28px;">
+    <div class="eyebrow" style="margin-bottom:8px;">마무리 체크</div>
+    <p style="margin:0;font-size:15px;">두 기출을 모두 풀었다면, 틀린 문제의 챕터로 돌아가 해당 표·시험 포인트를 다시 외우세요. <strong>정규화 단계 구분, 명령어 분류(DML/TCL/DDL/DCL), 조인 건수, NULL 처리, 윈도우 순위 함수</strong>는 거의 매 회차 출제됩니다. 시험장에서는 1과목을 빠르게 끝내고 2과목에 시간을 더 쓰세요. 합격을 응원합니다! 🍀</p>
+  </div>
+</div></section>
+</section>
+
+<!-- CHAPTERS_MARKER -->
+
+
+</main>
+
+<script>
+// nav
+var links=document.querySelectorAll('.lnb a[data-target]');
+var panels=document.querySelectorAll('.panel');
+var lnb=document.getElementById('lnb'), scrim=document.getElementById('scrim');
+function show(id){
+  panels.forEach(function(p){p.classList.toggle('active', p.id===id);});
+  links.forEach(function(a){a.classList.toggle('active', a.getAttribute('data-target')===id);});
+  window.scrollTo(0,0);
+  closeLnb();
+}
+links.forEach(function(a){a.addEventListener('click',function(){show(a.getAttribute('data-target'));});});
+document.querySelectorAll('[data-jump]').forEach(function(b){b.addEventListener('click',function(){show(b.getAttribute('data-jump'));});});
+// mobile drawer
+function openLnb(){lnb.classList.add('open'); scrim.classList.add('open');}
+function closeLnb(){lnb.classList.remove('open'); scrim.classList.remove('open');}
+document.getElementById('hamb').addEventListener('click',openLnb);
+scrim.addEventListener('click',closeLnb);
+// quiz
+function bindQuiz(root){
+  root.querySelectorAll('.quiz').forEach(function(q){
+    var ans=q.getAttribute('data-answer'); var opts=q.querySelectorAll('.opt'); var exp=q.querySelector('.quiz__exp');
+    opts.forEach(function(opt,i){opt.addEventListener('click',function(){
+      if(q.dataset.done) return; q.dataset.done='1'; var picked=i+1;
+      opts.forEach(function(o,j){o.disabled=true; if((j+1)==ans)o.classList.add('correct');});
+      if(picked!=ans)opt.classList.add('wrong'); if(exp)exp.classList.add('show');
+    });});
+  });
+}
+bindQuiz(document);
+// progress bar
+window.addEventListener('scroll',function(){
+  var h=document.documentElement; var s=h.scrollTop/(h.scrollHeight-h.clientHeight)*100;
+  document.getElementById('progress').style.width=(s||0)+'%';
+});
+// D-day
+(function(){
+  var exam=new Date(2026,10,14); var now=new Date();
+  var d=Math.ceil((exam-now)/(1000*60*60*24));
+  var el=document.querySelector('#dday b');
+  if(el){ el.textContent = d>0 ? ('D-'+d) : (d===0?'D-DAY':'시험 종료'); }
+})();
+</script>
+</body>
+</html>
